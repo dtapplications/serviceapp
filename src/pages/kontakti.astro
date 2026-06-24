@@ -1,5 +1,6 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Контакти">
   <div class="page-hero">
@@ -9,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="./">Начало</a> / Контакти</div>
+    <div class="container"><a href={base}>Начало</a> / Контакти</div>
   </div>
 
   <section>

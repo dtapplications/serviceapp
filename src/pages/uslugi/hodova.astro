@@ -1,5 +1,6 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Ходова и окачване">
   <div class="page-hero">
@@ -9,7 +10,7 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="./">Начало</a> / <a href="uslugi">Услуги</a> / Ходова и окачване</div>
+    <div class="container"><a href={base}>Начало</a> / <a href={`${base}uslugi`}>Услуги</a> / Ходова и окачване</div>
   </div>
 
   <section>
@@ -76,7 +77,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Запишете се за преглед на ходовата</h2>
       <p style="margin-bottom:2rem;">Прегледът на яма отнема около 20 минути и ще знаете точно какво трябва.</p>
-      <a href="kontakti" class="btn">Свържете се с нас</a>
+      <a href={`${base}kontakti`} class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

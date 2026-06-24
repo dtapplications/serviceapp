@@ -1,5 +1,6 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Ремонт на помпи">
   <div class="page-hero">
@@ -9,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="./">Начало</a> / Ремонт на помпи</div>
+    <div class="container"><a href={base}>Начало</a> / Ремонт на помпи</div>
   </div>
 
   <section>
@@ -25,7 +26,7 @@ import Layout from '../layouts/Layout.astro';
           </svg>
           <h3>Хидравлични помпи</h3>
           <p>Помпи за усилвателна кормилна система на леки и товарни автомобили. Отстраняваме течове, загуба на налягане и шумове.</p>
-          <a href="remont-pompi/hidravlichni" class="read-more">Прочети повече →</a>
+          <a href={`${base}remont-pompi/hidravlichni`} class="read-more">Прочети повече →</a>
         </div>
         <div class="card">
           <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -34,7 +35,7 @@ import Layout from '../layouts/Layout.astro';
           </svg>
           <h3>Зъбчати помпи</h3>
           <p>Ремонт на зъбчати помпи за мобилна и промишлена хидравлика - камиони, кранове, земеделска техника.</p>
-          <a href="remont-pompi/zobchati" class="read-more">Прочети повече →</a>
+          <a href={`${base}remont-pompi/zobchati`} class="read-more">Прочети повече →</a>
         </div>
         <div class="card">
           <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -42,7 +43,7 @@ import Layout from '../layouts/Layout.astro';
           </svg>
           <h3>Бутални помпи</h3>
           <p>Ремонт на аксиални и радиални бутални помпи за тежка строителна и минна техника с изисквания за високо налягане.</p>
-          <a href="remont-pompi/butaleni" class="read-more">Прочети повече →</a>
+          <a href={`${base}remont-pompi/butaleni`} class="read-more">Прочети повече →</a>
         </div>
       </div>
     </div>

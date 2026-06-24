@@ -1,5 +1,6 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Услуги">
   <div class="page-hero">
@@ -9,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="./">Начало</a> / Услуги</div>
+    <div class="container"><a href={base}>Начало</a> / Услуги</div>
   </div>
 
   <section>
@@ -41,7 +42,7 @@ import Layout from '../layouts/Layout.astro';
           </svg>
           <h3>Хидравлични цилиндри</h3>
           <p>Смяна на уплътнения, ремонт на щокове и сглобяване с гаранция.</p>
-          <a href="uslugi/hidravlichni-tsilindri" class="read-more">Прочети повече →</a>
+          <a href={`${base}uslugi/hidravlichni-tsilindri`} class="read-more">Прочети повече →</a>
         </div>
         <div class="card">
           <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -61,7 +62,7 @@ import Layout from '../layouts/Layout.astro';
           </svg>
           <h3>Хидромотори</h3>
           <p>Ремонт на аксиалнобутални, радиалнобутални и зъбчати хидромотори.</p>
-          <a href="uslugi/hidromotor" class="read-more">Прочети повече →</a>
+          <a href={`${base}uslugi/hidromotor`} class="read-more">Прочети повече →</a>
         </div>
         <div class="card">
           <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -70,7 +71,7 @@ import Layout from '../layouts/Layout.astro';
           </svg>
           <h3>Редуктори</h3>
           <p>Ремонт на планетарни, цилиндрични и червячни редуктори за строителна и промишлена техника.</p>
-          <a href="uslugi/reduktori" class="read-more">Прочети повече →</a>
+          <a href={`${base}uslugi/reduktori`} class="read-more">Прочети повече →</a>
         </div>
         <div class="card">
           <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -172,7 +173,7 @@ import Layout from '../layouts/Layout.astro';
           </svg>
           <h3>Геометрия на оси</h3>
           <p>Регулиране на сходимост и геометрия на предна и задна ос.</p>
-          <a href="uslugi/avtomobilno-obsluzhvane" class="read-more">Всички услуги →</a>
+          <a href={`${base}uslugi/avtomobilno-obsluzhvane`} class="read-more">Всички услуги →</a>
         </div>
       </div>
     </div>

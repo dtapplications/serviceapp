@@ -6,6 +6,7 @@ export interface Props {
   description?: string;
 }
 const { title = 'ТИМ КАР', description = 'Специализиран сервиз за хидравлични рейки, помпи и авторемонт. Бърз ремонт с 24 месеца гаранция.' } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="bg">
@@ -15,50 +16,50 @@ const { title = 'ТИМ КАР', description = 'Специализиран се�
     <base href={import.meta.env.BASE_URL} />
     <meta name="description" content={description} />
     <title>{title} | ТИМ КАР</title>
-    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href={`${base}favicon.png`} type="image/png" />
     <ClientRouter />
   </head>
   <body>
     <header>
       <div class="header-inner">
-          <a href="./" class="logo">
-            <img src="images/logo.png" alt="ТИМ КАР" class="logo-img" />
+          <a href={base} class="logo">
+            <img src={`${base}images/logo.png`} alt="ТИМ КАР" class="logo-img" />
           </a>
           <button class="nav-toggle" id="navToggle">☰</button>
           <nav id="mainNav">
             <ul>
-              <li><a href="./">Начало</a></li>
+              <li><a href={base}>Начало</a></li>
               <li>
-                <a href="za-nas">За нас</a>
+                <a href={`${base}za-nas`}>За нас</a>
               </li>
               <li>
-                <a href="uslugi">Услуги ▾</a>
+                <a href={`${base}uslugi`}>Услуги ▾</a>
                 <ul>
-                  <li class="dropdown-heading"><a href="remont-reyki">Ремонт на рейки</a></li>
-                  <li><a href="remont-reyki/hidravlichni">- Хидравлични рейки</a></li>
-                  <li><a href="remont-reyki/eps">- EPS рейки</a></li>
-                  <li><a href="remont-reyki/mehanchni">- Механични рейки</a></li>
+                  <li class="dropdown-heading"><a href={`${base}remont-reyki`}>Ремонт на рейки</a></li>
+                  <li><a href={`${base}remont-reyki/hidravlichni`}>- Хидравлични рейки</a></li>
+                  <li><a href={`${base}remont-reyki/eps`}>- EPS рейки</a></li>
+                  <li><a href={`${base}remont-reyki/mehanchni`}>- Механични рейки</a></li>
                   <li class="dropdown-divider"></li>
-                  <li class="dropdown-heading"><a href="remont-pompi">Ремонт на помпи</a></li>
-                  <li><a href="remont-pompi/hidravlichni">- Хидравлични помпи</a></li>
-                  <li><a href="remont-pompi/zobchati">- Зъбчати помпи</a></li>
-                  <li><a href="remont-pompi/butaleni">- Бутални помпи</a></li>
+                  <li class="dropdown-heading"><a href={`${base}remont-pompi`}>Ремонт на помпи</a></li>
+                  <li><a href={`${base}remont-pompi/hidravlichni`}>- Хидравлични помпи</a></li>
+                  <li><a href={`${base}remont-pompi/zobchati`}>- Зъбчати помпи</a></li>
+                  <li><a href={`${base}remont-pompi/butaleni`}>- Бутални помпи</a></li>
                   <li class="dropdown-divider"></li>
-                  <li><a href="uslugi/hidravlichni-tsilindri">Хидравлични цилиндри</a></li>
-                  <li><a href="uslugi/hidromotor">Хидромотор</a></li>
-                  <li><a href="uslugi/reduktori">Редуктори</a></li>
+                  <li><a href={`${base}uslugi/hidravlichni-tsilindri`}>Хидравлични цилиндри</a></li>
+                  <li><a href={`${base}uslugi/hidromotor`}>Хидромотор</a></li>
+                  <li><a href={`${base}uslugi/reduktori`}>Редуктори</a></li>
                   <li class="dropdown-divider"></li>
-                  <li class="dropdown-heading"><a href="uslugi/avtomobilno-obsluzhvane">Авторемонт</a></li>
-                  <li><a href="uslugi/sprachki">- Спирачна система</a></li>
-                  <li><a href="uslugi/hodova">- Ходова и окачване</a></li>
-                  <li><a href="uslugi/saediniteli">- Съединители</a></li>
-                  <li><a href="uslugi/angrenajni-remaci">- Ангренажни ремъци</a></li>
-                  <li><a href="uslugi/diagnostika">- Диагностика и геометрия</a></li>
+                  <li class="dropdown-heading"><a href={`${base}uslugi/avtomobilno-obsluzhvane`}>Авторемонт</a></li>
+                  <li><a href={`${base}uslugi/sprachki`}>- Спирачна система</a></li>
+                  <li><a href={`${base}uslugi/hodova`}>- Ходова и окачване</a></li>
+                  <li><a href={`${base}uslugi/saediniteli`}>- Съединители</a></li>
+                  <li><a href={`${base}uslugi/angrenajni-remaci`}>- Ангренажни ремъци</a></li>
+                  <li><a href={`${base}uslugi/diagnostika`}>- Диагностика и геометрия</a></li>
                 </ul>
               </li>
-              <li><a href="garantsiya">Гаранция</a></li>
-              <li><a href="polezno">Полезно</a></li>
-              <li><a href="kontakti">Контакти</a></li>
+              <li><a href={`${base}garantsiya`}>Гаранция</a></li>
+              <li><a href={`${base}polezno`}>Полезно</a></li>
+              <li><a href={`${base}kontakti`}>Контакти</a></li>
             </ul>
           </nav>
           <div class="header-contacts">
@@ -87,18 +88,18 @@ const { title = 'ТИМ КАР', description = 'Специализиран се�
           <div class="footer-col">
             <h4>Услуги</h4>
             <ul>
-              <li><a href="remont-reyki">Ремонт на рейки</a></li>
-              <li><a href="remont-pompi">Ремонт на помпи</a></li>
-              <li><a href="uslugi">Всички услуги</a></li>
-              <li><a href="garantsiya">Гаранция 24 месеца</a></li>
+              <li><a href={`${base}remont-reyki`}>Ремонт на рейки</a></li>
+              <li><a href={`${base}remont-pompi`}>Ремонт на помпи</a></li>
+              <li><a href={`${base}uslugi`}>Всички услуги</a></li>
+              <li><a href={`${base}garantsiya`}>Гаранция</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Компания</h4>
             <ul>
-              <li><a href="za-nas">За нас</a></li>
-              <li><a href="polezno">Полезно</a></li>
-              <li><a href="kontakti">Контакти</a></li>
+              <li><a href={`${base}za-nas`}>За нас</a></li>
+              <li><a href={`${base}polezno`}>Полезно</a></li>
+              <li><a href={`${base}kontakti`}>Контакти</a></li>
             </ul>
           </div>
           <div class="footer-col">

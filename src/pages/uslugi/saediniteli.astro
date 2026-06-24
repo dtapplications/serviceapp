@@ -1,5 +1,6 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Съединители">
   <div class="page-hero">
@@ -9,7 +10,7 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="./">Начало</a> / <a href="uslugi">Услуги</a> / Съединители</div>
+    <div class="container"><a href={base}>Начало</a> / <a href={`${base}uslugi`}>Услуги</a> / Съединители</div>
   </div>
 
   <section>
@@ -71,7 +72,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Имате съмнение за съединителя?</h2>
       <p style="margin-bottom:2rem;">Елате за преглед - ще прецизираме проблема и ще ви дадем оценка.</p>
-      <a href="kontakti" class="btn">Свържете се с нас</a>
+      <a href={`${base}kontakti`} class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

@@ -1,5 +1,6 @@
 ﻿---
 import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Хидравлични помпи">
   <div class="page-hero">
@@ -9,7 +10,7 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="./">Начало</a> / <a href="remont-pompi">Ремонт на помпи</a> / Хидравлични помпи</div>
+    <div class="container"><a href={base}>Начало</a> / <a href={`${base}remont-pompi`}>Ремонт на помпи</a> / Хидравлични помпи</div>
   </div>
 
   <section>
@@ -70,7 +71,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Запитване за ремонт</h2>
       <p style="margin-bottom:2rem;">Обадете се или напишете - ще ви отговорим бързо с цена и срок.</p>
-      <a href="kontakti" class="btn">Свържете се с нас</a>
+      <a href={`${base}kontakti`} class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>
