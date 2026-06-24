@@ -1,0 +1,115 @@
+﻿---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = 'ТИМ КАР', description = 'Специализиран сервиз за хидравлични рейки, помпи и авторемонт. Бърз ремонт с 24 месеца гаранция.' } = Astro.props;
+---
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | ТИМ КАР</title>
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+          <a href="/" class="logo">
+            <img src="/images/logo.png" alt="ТИМ КАР" class="logo-img" />
+          </a>
+          <button class="nav-toggle" id="navToggle">☰</button>
+          <nav id="mainNav">
+            <ul>
+              <li><a href="/">Начало</a></li>
+              <li>
+                <a href="/za-nas">За нас</a>
+              </li>
+              <li>
+                <a href="/uslugi">Услуги ▾</a>
+                <ul>
+                  <li class="dropdown-heading"><a href="/remont-reyki">Ремонт на рейки</a></li>
+                  <li><a href="/remont-reyki/hidravlichni">— Хидравлични рейки</a></li>
+                  <li><a href="/remont-reyki/eps">— EPS рейки</a></li>
+                  <li><a href="/remont-reyki/mehanchni">— Механични рейки</a></li>
+                  <li class="dropdown-divider"></li>
+                  <li class="dropdown-heading"><a href="/remont-pompi">Ремонт на помпи</a></li>
+                  <li><a href="/remont-pompi/hidravlichni">— Хидравлични помпи</a></li>
+                  <li><a href="/remont-pompi/zobchati">— Зъбчати помпи</a></li>
+                  <li><a href="/remont-pompi/butaleni">— Бутални помпи</a></li>
+                  <li class="dropdown-divider"></li>
+                  <li><a href="/uslugi/hidravlichni-tsilindri">Хидравлични цилиндри</a></li>
+                  <li><a href="/uslugi/hidromotor">Хидромотор</a></li>
+                  <li><a href="/uslugi/reduktori">Редуктори</a></li>
+                  <li><a href="/uslugi/avtomobilno-obsluzhvane">Авт. обслужване</a></li>
+                </ul>
+              </li>
+              <li><a href="/garantsiya">Гаранция</a></li>
+              <li><a href="/faktologiya">Полезно</a></li>
+              <li><a href="/kontakti">Контакти</a></li>
+            </ul>
+          </nav>
+          <div class="header-contacts">
+            <a href="tel:0888308666">📞 0888 308 666</a>
+            <a href="mailto:office@timcar.com" class="header-contact-email">✉ office@timcar.com</a>
+            <a href="https://www.facebook.com/timcar" target="_blank" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>ТИМ КАР</h4>
+            <p>Сервиз за хидравлични рейки, помпи и авторемонт. Бърза диагностика и качествен ремонт с 24 месеца гаранция.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Услуги</h4>
+            <ul>
+              <li><a href="/remont-reyki">Ремонт на рейки</a></li>
+              <li><a href="/remont-pompi">Ремонт на помпи</a></li>
+              <li><a href="/uslugi">Всички услуги</a></li>
+              <li><a href="/garantsiya">Гаранция 24 месеца</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Компания</h4>
+            <ul>
+              <li><a href="/za-nas">За нас</a></li>
+              <li><a href="/faktologiya">Полезно</a></li>
+              <li><a href="/kontakti">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Контакти</h4>
+            <ul>
+              <li><a href="tel:0888308666">📞 0888 308 666</a></li>
+              <li><a href="mailto:office@timcar.com" class="header-top-email">✉ office@timcar.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 ТИМ КАР. Всички права запазени.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById('navToggle');
+      const nav = document.getElementById('mainNav');
+      toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
+    </script>
+  </body>
+</html>

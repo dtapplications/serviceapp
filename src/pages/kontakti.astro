@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Контакти">
+  <div class="page-hero">
+    <div class="container">
+      <h1>Контакти</h1>
+      <p>Свържете се с нас за консултация и оферта</p>
+    </div>
+  </div>
+  <div class="breadcrumb">
+    <div class="container"><a href="/">Начало</a> / Контакти</div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Свържете се с нас</h3>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div>
+              <strong>Телефон</strong>
+              <span><a href="tel:0888308666" style="color:var(--green)">0888 308 666</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">✉️</span>
+            <div>
+              <strong>Имейл</strong>
+              <span><a href="mailto:office@timcar.com" style="color:var(--green)">office@timcar.com</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📘</span>
+            <div>
+              <strong>Facebook</strong>
+              <span><a href="https://www.facebook.com/timcar" target="_blank" style="color:var(--green)">facebook.com/timcar</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">⏰</span>
+            <div>
+              <strong>Работно време</strong>
+              <span>Пон – Пет: 08:00 – 18:00</span>
+            </div>
+          </div>
+          <div style="margin-top:2rem;">
+            <a href="https://maps.google.com" target="_blank" class="btn">📍 Виж на картата</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.3rem; margin-bottom:1.5rem; color:var(--dark)">Изпратете запитване</h3>
+          <form>
+            <input type="text" placeholder="Вашето име" required />
+            <input type="tel" placeholder="Телефон за връзка" required />
+            <input type="email" placeholder="Имейл адрес" />
+            <input type="text" placeholder="Марка и модел на автомобила" />
+            <textarea placeholder="Опишете проблема или услугата, от която се нуждаете..."></textarea>
+            <button type="submit" class="btn">Изпрати запитване</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
