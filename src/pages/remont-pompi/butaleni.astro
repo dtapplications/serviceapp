@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Бутални помпи">
@@ -9,23 +9,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/remont-pompi">Ремонт на помпи</a> / Бутални помпи</div>
+    <div class="container"><a href="./">Начало</a> / <a href="remont-pompi">Ремонт на помпи</a> / Бутални помпи</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Висококачествен ремонт за изискващи системи</h2>
-          <p style="margin-bottom:1rem;">Буталните помпи работят с най-високо налягане сред хидравличните помпи и затова изискват прецизен ремонт. Грешка при сглобяването води до бърза повторна повреда.</p>
-          <p style="margin-bottom:1rem;">В ТИМ КАР разглобяваме помпата, измерваме всички компоненти с точни инструменти и подменяме бутала, лагери и разпределителни дискове само при доказана необходимост.</p>
-          <p>Всяка ремонтирана бутална помпа преминава тест на стенд при работно налягане преди предаване.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Бутална помпа - не е за всеки сервиз</h2>
+          <p style="margin-bottom:1rem;">Буталните помпи работят при значително по-високо налягане от зъбчатите и грешка при сглобяването ги разваля бързо. Затова не ги ремонтира всеки - трябват точни измервания и познаване на допустимите хлабини за всеки модел.</p>
+          <p style="margin-bottom:1rem;">Разглобяваме помпата, измерваме бутала, лагери, разпределителни дискове и цилиндровия блок. Подменяме само частите извън допуска - не правим смяна на всичко по навик.</p>
+          <p>Преди предаване всяка бутална помпа се тества при работно налягане - предаваме само ако резултатът е добър.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти</p>
           </div>
         </div>
       </div>
@@ -40,19 +40,28 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">💰</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
           <h3>Значителна икономия</h3>
           <p>Новата бутална помпа е скъпа, а доставката отнема седмици. Ремонтът решава проблема за дни.</p>
         </div>
         <div class="card">
-          <div class="card-icon">⚡</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
           <h3>По-кратък престой на машината</h3>
           <p>При нас повечето ремонти приключват в рамките на 2–3 работни дни.</p>
         </div>
         <div class="card">
-          <div class="card-icon">✅</div>
-          <h3>Гаранция 24 месеца</h3>
-          <p>Ремонтираната помпа получава пълна 24-месечна гаранция за спокойствие.</p>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <h3>Гаранция 12 месеца</h3>
+          <p>Ремонтираната помпа получава пълна 12-месечна гаранция за спокойствие.</p>
         </div>
       </div>
     </div>
@@ -61,8 +70,8 @@ import Layout from '../../layouts/Layout.astro';
   <section>
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Имате повредена бутална помпа?</h2>
-      <p style="margin-bottom:2rem;">Свържете се с нас — ще уточним срок и цена преди да докарате помпата.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <p style="margin-bottom:2rem;">Свържете се с нас - ще уточним срок и цена преди да докарате помпата.</p>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

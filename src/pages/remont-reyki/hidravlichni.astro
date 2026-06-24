@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Хидравлични рейки">
@@ -9,23 +9,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/remont-reyki">Ремонт на рейки</a> / Хидравлични рейки</div>
+    <div class="container"><a href="./">Начало</a> / <a href="remont-reyki">Ремонт на рейки</a> / Хидравлични рейки</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Как разпознаваме проблема</h2>
-          <p style="margin-bottom:1rem;">Хидравличната рейка работи под налягане и при износване на уплътненията започва да губи масло. Резултатът е тежко кормило, мазна следа под колата и шумове при завиване.</p>
-          <p style="margin-bottom:1rem;">В ТИМ КАР разглобяваме рейката изцяло, проверяваме всяка част и подменяме само онова, което е дефектно. Не сменяме наобум.</p>
-          <p>Разполагаме с голям склад от ремонтни комплекти, което ни позволява да изпълним повечето ремонти в рамките на един работен ден.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Течаща рейка - не чакайте да се влоши</h2>
+          <p style="margin-bottom:1rem;">Повечето хидравлични рейки не се чупят изведнъж - износват се постепенно. Забелязвате малко масло под колата, волановото усилие леко се е увеличило, чувате звук при завиване. Ако оставите това, ремонтът става по-голям и по-скъп.</p>
+          <p style="margin-bottom:1rem;">Рейката се сваля, разглобява напълно и всяка вътрешна част се оглежда. Подменяме уплътненията, лагерите или щока - само онова, което реално е дефектно. Нямаме интерес да вкарваме ненужни части.</p>
+          <p>Разполагаме с ремонтни комплекти за повечето разпространени модели и в по-голямата част от случаите рейката е готова до края на работния ден.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти</p>
           </div>
         </div>
       </div>
@@ -40,19 +40,28 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">💧</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
           <h3>Петна масло под колата</h3>
           <p>Мазни петна под предната част на автомобила, особено след паркиране на едно място.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🔊</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          </svg>
           <h3>Звуци при завиване</h3>
-          <p>Всякакви нехарактерни звуци — хрускане, писукане или глухо удряне при движение на волана.</p>
+          <p>Всякакви нехарактерни звуци - хрускане, писукане или глухо удряне при движение на волана.</p>
         </div>
         <div class="card">
-          <div class="card-icon">⚠️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
           <h3>Усилие при паркиране</h3>
-          <p>Ако волановото усилие се е увеличило забележимо — особено при малка скорост — рейката или помпата имат проблем.</p>
+          <p>Ако волановото усилие се е увеличило забележимо - особено при малка скорост - рейката или помпата имат проблем.</p>
         </div>
       </div>
     </div>
@@ -61,8 +70,8 @@ import Layout from '../../layouts/Layout.astro';
   <section>
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Имате съмнения?</h2>
-      <p style="margin-bottom:2rem;">Донесете колата — диагностиката е безплатна при оставяне за ремонт.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <p style="margin-bottom:2rem;">Донесете колата - диагностиката е безплатна при оставяне за ремонт.</p>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

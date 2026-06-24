@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Контакти">
@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / Контакти</div>
+    <div class="container"><a href="./">Начало</a> / Контакти</div>
   </div>
 
   <section>
@@ -45,9 +45,6 @@ import Layout from '../layouts/Layout.astro';
               <span>Пон – Пет: 08:00 – 18:00</span>
             </div>
           </div>
-          <div style="margin-top:2rem;">
-            <a href="https://maps.google.com" target="_blank" class="btn">📍 Виж на картата</a>
-          </div>
         </div>
 
         <div>
@@ -62,6 +59,23 @@ import Layout from '../layouts/Layout.astro';
           </form>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <p style="margin-bottom:1rem; font-size:1rem; color:var(--dark);">
+        <strong>Адрес:</strong> ул. Проф. Атанас Иширков, ж.к. Студентски град, София 1700
+      </p>
+      <iframe
+        src="https://maps.google.com/maps?q=42.6475907,23.3477837&z=17&output=embed"
+        width="100%"
+        height="420"
+        style="border:0; border-radius:8px; display:block;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   </section>
 </Layout>

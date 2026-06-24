@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Хидравлични цилиндри">
@@ -9,23 +9,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/uslugi">Услуги</a> / Хидравлични цилиндри</div>
+    <div class="container"><a href="./">Начало</a> / <a href="uslugi">Услуги</a> / Хидравлични цилиндри</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Ремонт, а не подмяна</h2>
-          <p style="margin-bottom:1rem;">Хидравличният цилиндър е линейно задвижване — когато уплътненията се износят, масло изтича и системата губи сила. Ремонтът е въпрос на подмяна на уплътнения и проверка на щока.</p>
-          <p style="margin-bottom:1rem;">Демонтираме цилиндъра, почистваме вътрешността, проверяваме щока за надрасквания и наклонено харпане, подменяме уплътнителния комплект и сглобяваме. Ако щокът е наранен — хромирането може да се възстанови.</p>
-          <p>Поддържаме широк склад от уплътнения за различни диаметри и типове цилиндри.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Теч от цилиндър - почти винаги се ремонтира</h2>
+          <p style="margin-bottom:1rem;">Когато хидравличният цилиндър започне да тече, причината в 90% от случаите са износени уплътнения. Не е нужна нова единица - нужен е уплътнителен комплект и малко работа.</p>
+          <p style="margin-bottom:1rem;">Сваляме цилиндъра, почистваме го, проверяваме щока за надрасквания и деформации. Ако щокът е в ред - слагаме нов уплътнителен комплект и сглобяваме. Ако е наранен - може да се хромира и възстанови.</p>
+          <p>Имаме уплътнения за голям диапазон от диаметри и типове цилиндри - за строителна, земеделска и автомобилна техника.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти</p>
           </div>
         </div>
       </div>
@@ -40,17 +40,30 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">🏗️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+            <line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
           <h3>Строителна техника</h3>
           <p>Цилиндри за багери, булдозери, телескопични товарачи и подемни кранове.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🌾</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
           <h3>Земеделска техника</h3>
           <p>Цилиндри за трактори, комбайни, ремаркета и прикачен инвентар.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🚛</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <path d="M16 8h4l3 3v3h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
           <h3>Камиони и самосвали</h3>
           <p>Накланящи цилиндри за самосвали, цистерни и хидравлични рампи.</p>
         </div>
@@ -61,8 +74,8 @@ import Layout from '../../layouts/Layout.astro';
   <section>
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Изпратете ни запитване</h2>
-      <p style="margin-bottom:2rem;">Посочете диаметъра и хода на цилиндъра — ще отговорим с цена и срок.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <p style="margin-bottom:2rem;">Посочете диаметъра и хода на цилиндъра - ще отговорим с цена и срок.</p>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

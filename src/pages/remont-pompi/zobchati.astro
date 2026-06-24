@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Зъбчати помпи">
@@ -9,23 +9,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/remont-pompi">Ремонт на помпи</a> / Зъбчати помпи</div>
+    <div class="container"><a href="./">Начало</a> / <a href="remont-pompi">Ремонт на помпи</a> / Зъбчати помпи</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Проста конструкция, но не безпроблемна</h2>
-          <p style="margin-bottom:1rem;">Зъбчатите помпи се използват навсякъде — от камионски кранове до хидравлични преси. Простата им конструкция ги прави надеждни, но не ги предпазва от износване.</p>
-          <p style="margin-bottom:1rem;">При нас зъбчатата помпа се разглобява, проверяват се зъбните колела, корпусът и уплътненията, и се подменя само онова, което е дефектно. Ремонтираме всички типоразмери.</p>
-          <p>Разполагаме с резервни части за широк набор от помпи — без дълго чакане за доставка.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Зъбчата помпа - износва се тихо</h2>
+          <p style="margin-bottom:1rem;">Зъбчатата помпа е проста на изглед, но когато зъбните колела или корпусът се износят, налягането пада и хидравличната система спира да работи нормално. Проблемът рядко идва изведнъж - обикновено се бавно влошава.</p>
+          <p style="margin-bottom:1rem;">Разглобяваме помпата, измерваме хлабините между колелата и корпуса, сменяме уплътненията и всичко, което не е в норма. Работим с всички типоразмери - от малки помпи за автомобили до по-едри за строителна техника.</p>
+          <p>Поддържаме склад с части за най-разпространените серии, което съкращава значително времето за ремонт.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти</p>
           </div>
         </div>
       </div>
@@ -40,17 +40,30 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">🚛</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <path d="M16 8h4l3 3v3h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
           <h3>Камиони и ТИР</h3>
           <p>Помпи за хидравлика на кранове, самосвали, тип-тела и хидравлични рампи.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🏗️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+            <line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
           <h3>Строителна техника</h3>
           <p>Помпи за багери, фадроми, телескопични товарачи и земеделска техника.</p>
         </div>
         <div class="card">
-          <div class="card-icon">⚙️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
           <h3>Промишлено оборудване</h3>
           <p>Помпи за хидравлични преси, щанцови машини и производствени линии.</p>
         </div>
@@ -62,7 +75,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Изпратете запитване</h2>
       <p style="margin-bottom:2rem;">Свържете се с нас с марката и модела на помпата за бърза оферта.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

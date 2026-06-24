@@ -8,10 +8,16 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:github": "cross-env SITE=https://dtapplications.github.io BASE=/serviceapp astro build",
+    "build:production": "cross-env SITE=https://timcar.com astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "cross-env": "^10.1.0"
   }
 }

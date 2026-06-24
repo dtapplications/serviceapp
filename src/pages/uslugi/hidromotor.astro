@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Хидромотор">
@@ -9,23 +9,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/uslugi">Услуги</a> / Хидромотор</div>
+    <div class="container"><a href="./">Начало</a> / <a href="uslugi">Услуги</a> / Хидромотор</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Хидромотор — от диагностика до тест</h2>
-          <p style="margin-bottom:1rem;">Хидромоторът преобразува хидравличното налягане в въртеливо движение. Когато носящото колело спира да се движи, вентилаторът не се върти или изходната скорост намалява — причината обикновено е в хидромотора.</p>
-          <p style="margin-bottom:1rem;">Ремонтираме аксиалнобутални, радиалнобутални и зъбчати хидромотори. Всяка ремонтирана единица преминава тест при работно налягане преди да бъде предадена.</p>
-          <p>Ако хидромоторът е редки модел — свържете се с нас и ще проверим наличността на части.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Колелото спря да се върти - хидромоторът е под въпрос</h2>
+          <p style="margin-bottom:1rem;">Задвижващото колело на багера не се движи, вентилаторът на охладителя спря, транспортьорната лента се забавя - хидромоторът е честата причина. Преди да поръчвате нов, има смисъл да проверим дали може да се ремонтира.</p>
+          <p style="margin-bottom:1rem;">Работим с аксиалнобутални, радиалнобутални и зъбчати хидромотори. Разглобяваме, измерваме и подменяме износените елементи. Всяка ремонтирана единица се тества при работно налягане преди предаване.</p>
+          <p>При по-редки модели проверяваме наличността на части преди да поемем ангажимент - по-добре да знаете предварително.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти</p>
           </div>
         </div>
       </div>
@@ -40,17 +40,28 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">🏗️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
           <h3>Въртящи механизми</h3>
           <p>Задвижване на горна въртяща се маса на багери и мобилни кранове.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🌾</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
           <h3>Земеделски машини</h3>
           <p>Задвижване на работни органи при комбайни, балопреси и разпръсквачи.</p>
         </div>
         <div class="card">
-          <div class="card-icon">⚙️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/>
+          </svg>
           <h3>Промишлена хидравлика</h3>
           <p>Хидромотори за конвейерни системи, смесители и хидравлични преси.</p>
         </div>
@@ -62,7 +73,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Запитване за хидромотор</h2>
       <p style="margin-bottom:2rem;">Свържете се с нас с данните на мотора за оценка и срок.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

@@ -1,32 +1,33 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="За нас">
   <div class="page-hero">
     <div class="container">
       <h1>За нас</h1>
-      <p>Вашият доверен партньор за хидравлика и авторемонт</p>
+      <p>Хора, които познават хидравликата отвътре</p>
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / За нас</div>
+    <div class="container"><a href="./">Начало</a> / За нас</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Кои сме ние?</h2>
-          <p style="margin-bottom:1rem;">ТИМ КАР е специализиран сервиз за хидравлични системи и авторемонт. Работим с автомобили, камиони и строителна техника — независимо от марката и модела.</p>
-          <p style="margin-bottom:1rem;">Екипът ни се е фокусирал върху хидравличните кормилни рейки, помпи и цилиндри, но предлагаме и пълно сервизно обслужване — от смяна на ремъци до геометрия на оси.</p>
-          <p>Разполагаме с модерно оборудване и работни места, които ни позволяват да изпълняваме ремонтите бързо и с траен резултат.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Какво правим</h2>
+          <p style="margin-bottom:1rem;">В ТИМ КАР се занимаваме предимно с хидравлични кормилни рейки, помпи и цилиндри - за леки коли, бусове, камиони и строителна техника. Това е тясна специализация и знаем как да я правим добре.</p>
+          <p style="margin-bottom:1rem;">Освен хидравликата, извършваме и общ авторемонт - ходова, спирачки, ангренажни ремъци, геометрия и компютърна диагностика. Целта е клиентът да не търси три различни сервиза.</p>
+          <p>Работим честно: казваме какво е проблемът, даваме реална цена и не препоръчваме смяна, когато ремонтът е достатъчен.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти*</p>
           </div>
+          <p style="margin-top:1rem; font-size:0.85rem; color:#666;">* За останалите видове ремонти гаранцията зависи от вида на ремонта и вложените части. Уточнява се при предаване.</p>
         </div>
       </div>
     </div>
@@ -35,24 +36,44 @@ import Layout from '../layouts/Layout.astro';
   <section class="gray-bg">
     <div class="container">
       <div class="section-title">
-        <h2>Как работим</h2>
+        <h2>Как изглежда един ремонт при нас</h2>
         <div class="line"></div>
       </div>
-      <div class="grid-3">
+      <div class="grid-2">
         <div class="card">
-          <div class="card-icon">🔍</div>
-          <h3>Точна диагностика</h3>
-          <p>Всеки автомобил минава през пълна диагностика преди да се пристъпи към ремонт — без предположения, само факти.</p>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+            <rect x="9" y="3" width="6" height="4" rx="1"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <h3>Приемате колата, гледаме я</h3>
+          <p>Не поемаме ангажимент по телефона. Колата идва при нас, разглеждаме я и казваме точно какво е проблемът и колко ще струва.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🛠️</div>
-          <h3>Качествени части</h3>
-          <p>Използваме само проверени резервни части, подходящи за конкретния модел и приложение.</p>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <h3>Работим само с вашето съгласие</h3>
+          <p>Нищо не пипаме преди да сте наясно с цената. Ако не сте съгласни - прибирате колата без да плащате нищо.</p>
         </div>
         <div class="card">
-          <div class="card-icon">✅</div>
-          <h3>Проверка след ремонт</h3>
-          <p>След всеки ремонт правим контролна проверка, преди да върнем автомобила на клиента.</p>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <h3>Ремонтът се случва бързо</h3>
+          <p>Разполагаме с голям склад от части и повечето ремонти приключват в рамките на деня или следващия работен ден.</p>
+        </div>
+        <div class="card">
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+            <line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+          <h3>Предавате с гаранция на ръка</h3>
+          <p>Хидравличните ремонти излизат с 12-месечна гаранция - писмена, не устна. За останалото - уточняваме при предаване.</p>
         </div>
       </div>
     </div>
@@ -61,29 +82,66 @@ import Layout from '../layouts/Layout.astro';
   <section>
     <div class="container">
       <div class="section-title">
-        <h2>Нашето оборудване</h2>
+        <h2>С какво работим</h2>
         <div class="line"></div>
       </div>
-      <div class="grid-2">
+      <div class="grid-3">
         <div class="card">
-          <div class="card-icon">🏗️</div>
-          <h3>Хидравлични подемници</h3>
-          <p>Разполагаме с четири подемника с капацитет 4 тона, осигуряващи пълен достъп до ходовата и хидравличната система.</p>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+          <h3>Стендове за хидравлика</h3>
+          <p>Специализирани маси за демонтаж, измерване и сглобяване на рейки, помпи и цилиндри.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🔩</div>
-          <h3>Работни станции за хидравлика</h3>
-          <p>Специализирани маси и инструменти за демонтаж, почистване и сглобяване на хидравлични компоненти.</p>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+            <path d="M7 10h2l2-3 2 6 2-3h2"/>
+          </svg>
+          <h3>Компютърна диагностика</h3>
+          <p>Четене и изчистване на грешки, проверка на сензори и адаптации за всички марки и модели.</p>
         </div>
         <div class="card">
-          <div class="card-icon">📐</div>
-          <h3>Стенд за геометрия на оси</h3>
-          <p>Прецизен стенд за регулиране на сходимост и геометрия на предна и задна ос.</p>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="3"/>
+            <line x1="12" y1="2" x2="12" y2="5"/>
+            <line x1="12" y1="19" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="5" y2="12"/>
+            <line x1="19" y1="12" x2="22" y2="12"/>
+          </svg>
+          <h3>Стенд за геометрия</h3>
+          <p>Регулираме сходимост и геометрия на предна и задна ос - след ремонт на рейка или ходова.</p>
         </div>
         <div class="card">
-          <div class="card-icon">💻</div>
-          <h3>Диагностично оборудване</h3>
-          <p>Компютърна диагностика за всички марки и модели — четене и изчистване на грешки, параметризация.</p>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <h3>Подемници 4т</h3>
+          <p>Четири подемника с капацитет 4 тона за пълен достъп до ходовата и хидравличната система.</p>
+        </div>
+        <div class="card">
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+          <h3>Склад с части</h3>
+          <p>Поддържаме запас от уплътнителни комплекти и лагери за най-разпространените модели.</p>
+        </div>
+        <div class="card">
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
+            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+          </svg>
+          <h3>Спирачна линия</h3>
+          <p>Оборудване за проверка и ремонт на спирачни системи - накладки, дискове, цилиндри.</p>
         </div>
       </div>
     </div>

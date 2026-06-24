@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Редуктори">
@@ -9,23 +9,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/uslugi">Услуги</a> / Редуктори</div>
+    <div class="container"><a href="./">Начало</a> / <a href="uslugi">Услуги</a> / Редуктори</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Редукторът е ремонтируем</h2>
-          <p style="margin-bottom:1rem;">Шумове, прегряване или теч от редуктора са сигнали за износване на лагерите или зъбните двойки. Игнорирането им води до пълен разпад — затова е важно да се реагира навреме.</p>
-          <p style="margin-bottom:1rem;">Разглобяваме редуктора, дефектуваме всяка шайба и зъбно колело, подменяме дефектните части и регулираме хлабините преди сглобяване.</p>
-          <p>Ремонтираме планетарни, цилиндрични и червячни редуктори за широк спектър машини.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Шум от редуктора - не го оставяйте</h2>
+          <p style="margin-bottom:1rem;">Хрускане, бръмчене или вибрация при работа на редуктора обикновено означава износен лагер или зъбна двойка. Ако продължите да работите с него, повредата се разпространява и цената на ремонта расте.</p>
+          <p style="margin-bottom:1rem;">Разглобяваме редуктора изцяло, проверяваме всяко зъбно колело, лагер и уплътнение. Подменяме само дефектните елементи, регулираме хлабините и сглобяваме. Не правим профилактична смяна на части, които са в ред.</p>
+          <p>Ремонтираме планетарни, цилиндрични и червячни редуктори за строителна, земеделска и промишлена техника.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти</p>
           </div>
         </div>
       </div>
@@ -40,19 +40,28 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">🔊</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"/>
+            <path d="M17 3a2.828 2.828 0 1 1 4 4L12 16l-4 1 1-4 8-10z"/>
+          </svg>
           <h3>Шумове и вибрации</h3>
-          <p>Скърцане, хрускане или повтарящо се тракане при работа на редуктора — признак за износени лагери или зъбни колела.</p>
+          <p>Скърцане, хрускане или повтарящо се тракане при работа на редуктора - признак за износени лагери или зъбни колела.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🌡️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>
+          </svg>
           <h3>Прегряване на корпуса</h3>
-          <p>Ненормално висока температура при нормално натоварване — признак за недостатъчна смазка или триене.</p>
+          <p>Ненормално висока температура при нормално натоварване - признак за недостатъчна смазка или триене.</p>
         </div>
         <div class="card">
-          <div class="card-icon">💧</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v6M12 18v4M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h4M18 12h4"/>
+            <path d="M7 17A5 5 0 0 1 7 7"/>
+            <path d="M17 7a5 5 0 0 1 0 10"/>
+          </svg>
           <h3>Теч на масло</h3>
-          <p>Течове около уплътненията или капаците — навреме открит теч предпазва от по-голяма повреда.</p>
+          <p>Течове около уплътненията или капаците - навреме открит теч предпазва от по-голяма повреда.</p>
         </div>
       </div>
     </div>
@@ -61,8 +70,8 @@ import Layout from '../../layouts/Layout.astro';
   <section>
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Имате въпроси за ремонт на редуктор?</h2>
-      <p style="margin-bottom:2rem;">Свържете се с нас — ще ви помогнем да прецените дали е по-добре да се ремонтира или да се смени.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <p style="margin-bottom:2rem;">Свържете се с нас - ще ви помогнем да прецените дали е по-добре да се ремонтира или да се смени.</p>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

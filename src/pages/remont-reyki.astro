@@ -1,15 +1,15 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Ремонт на рейки">
   <div class="page-hero">
     <div class="container">
       <h1>Ремонт на кормилни рейки</h1>
-      <p>Хидравлични, EPS и механични — всички видове кормилни рейки</p>
+      <p>Хидравлични, EPS и механични - всички видове кормилни рейки</p>
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / Ремонт на рейки</div>
+    <div class="container"><a href="./">Начало</a> / Ремонт на рейки</div>
   </div>
 
   <section>
@@ -21,22 +21,28 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">💧</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
           <h3>Хидравлични кормилни рейки</h3>
-          <p>Течове, тежко кормило, шумове при завиване — диагностицираме и отстраняваме дефекта с подмяна на уплътнения и износени части.</p>
-          <a href="/remont-reyki/hidravlichni" class="read-more">Прочети повече →</a>
+          <p>Течове, тежко кормило, шумове при завиване - диагностицираме и отстраняваме дефекта с подмяна на уплътнения и износени части.</p>
+          <a href="remont-reyki/hidravlichni" class="read-more">Прочети повече →</a>
         </div>
         <div class="card">
-          <div class="card-icon">⚡</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
           <h3>EPS електрически рейки</h3>
-          <p>Грешки на табло, прекъсващо усилване, вибрации — ремонтираме електрическата и механичната част на EPS рейките.</p>
-          <a href="/remont-reyki/eps" class="read-more">Прочети повече →</a>
+          <p>Грешки на табло, прекъсващо усилване, вибрации - ремонтираме електрическата и механичната част на EPS рейките.</p>
+          <a href="remont-reyki/eps" class="read-more">Прочети повече →</a>
         </div>
         <div class="card">
-          <div class="card-icon">🔧</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
           <h3>Механични рейки</h3>
-          <p>Хлабав волан, странични удари, неточна реакция — ремонт и регулиране на механичните кормилни рейки и конзоли.</p>
-          <a href="/remont-reyki/mehanchni" class="read-more">Прочети повече →</a>
+          <p>Хлабав волан, странични удари, неточна реакция - ремонт и регулиране на механичните кормилни рейки и конзоли.</p>
+          <a href="remont-reyki/mehanchni" class="read-more">Прочети повече →</a>
         </div>
       </div>
     </div>
@@ -50,24 +56,38 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="grid-2">
         <div class="card">
-          <div class="card-icon">1️⃣</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+            <rect x="9" y="3" width="6" height="4" rx="1"/>
+            <path d="M9 12h6M9 16h4"/>
+          </svg>
           <h3>Приемане и диагностика</h3>
           <p>Проверяваме кормилната система и установяваме точния проблем преди да започнем каквато и да е работа.</p>
         </div>
         <div class="card">
-          <div class="card-icon">2️⃣</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/>
+            <line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
           <h3>Разглобяване и оглед</h3>
           <p>Рейката се разглобява изцяло и всяка част се огледа и измерва за износване или повреда.</p>
         </div>
         <div class="card">
-          <div class="card-icon">3️⃣</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
           <h3>Ремонт с качествени части</h3>
-          <p>Подменяме само дефектните елементи — уплътнения, лагери, щокове — с подходящи за модела части.</p>
+          <p>Подменяме само дефектните елементи - уплътнения, лагери, щокове - с подходящи за модела части.</p>
         </div>
         <div class="card">
-          <div class="card-icon">4️⃣</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
           <h3>Тест и предаване с гаранция</h3>
-          <p>След сглобяване правим функционална проверка и предаваме с 24-месечна гаранция.</p>
+          <p>След сглобяване правим функционална проверка и предаваме с 12-месечна гаранция.</p>
         </div>
       </div>
     </div>
@@ -76,8 +96,8 @@ import Layout from '../layouts/Layout.astro';
   <section style="background:var(--dark); color:#fff; text-align:center;">
     <div class="container">
       <h2 style="margin-bottom:1rem;">Проблем с кормилото?</h2>
-      <p style="color:#aaa; margin-bottom:2rem;">Обадете ни се или изпратете запитване — ще ви отговорим бързо.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <p style="color:#aaa; margin-bottom:2rem;">Обадете ни се или изпратете запитване - ще ви отговорим бързо.</p>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

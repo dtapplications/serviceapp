@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Механични рейки">
@@ -9,23 +9,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/remont-reyki">Ремонт на рейки</a> / Механични рейки</div>
+    <div class="container"><a href="./">Начало</a> / <a href="remont-reyki">Ремонт на рейки</a> / Механични рейки</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Проста конструкция, прецизен ремонт</h2>
-          <p style="margin-bottom:1rem;">Механичните рейки нямат усилвател, но се износват точно като останалите видове. Хлабина, странични удари и неточна реакция на кормилото са типичните оплаквания.</p>
-          <p style="margin-bottom:1rem;">Ремонтираме механичните рейки чрез подмяна на лагери, уплътнения и регулиране на хлабините — без ненужна смяна на цялата рейка.</p>
-          <p>Услугата е подходяща за по-стари автомобили, малолитражки и превозни средства без усилвател.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Хлабав волан - не е нормално</h2>
+          <p style="margin-bottom:1rem;">Механичната рейка няма усилвател - работи директно с мускулна сила. Затова когато се появи хлабина или неточна реакция на волана, усещате го веднага. Игнорирането му влошава управляемостта и товари неравномерно гумите.</p>
+          <p style="margin-bottom:1rem;">Сваляме рейката, измерваме хлабините, подменяме лагерите и уплътненията и регулираме преди сглобяване. Ако само регулировката е достатъчна - не поставяме нови части без нужда.</p>
+          <p>Работим с механични рейки на малолитражки, по-стари автомобили и специализирана техника без хидравлично усилване.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти</p>
           </div>
         </div>
       </div>
@@ -40,17 +40,27 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">↔️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20"/>
+          </svg>
           <h3>Хлабина на волана</h3>
-          <p>Мъртва зона — волановото движение не се предава веднага към колелата.</p>
+          <p>Мъртва зона - волановото движение не се предава веднага към колелата.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🔊</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          </svg>
           <h3>Удари при неравности</h3>
           <p>Почукване или тракане при преминаване на дупки и неравен терен.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🚗</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <path d="M16 8h4l3 3v3h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
           <h3>Колата дърпа настрани</h3>
           <p>Автомобилът не тегне право или реагира бавно при корекция на курса.</p>
         </div>
@@ -61,8 +71,8 @@ import Layout from '../../layouts/Layout.astro';
   <section>
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Запитване или записване</h2>
-      <p style="margin-bottom:2rem;">Свържете се с нас — диагностиката е безплатна при оставяне на автомобила.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <p style="margin-bottom:2rem;">Свържете се с нас - диагностиката е безплатна при оставяне на автомобила.</p>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

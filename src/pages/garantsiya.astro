@@ -1,30 +1,43 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Гаранция">
   <div class="page-hero">
     <div class="container">
       <h1>Гаранция</h1>
-      <p>Стоим зад всеки ремонт с 24-месечна гаранция</p>
+      <p>Стоим зад всеки ремонт - условията зависят от вида на работата</p>
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / Гаранция</div>
+    <div class="container"><a href="./">Начало</a> / Гаранция</div>
   </div>
 
   <section>
     <div class="container">
-      <div style="max-width:800px; margin:0 auto; text-align:center;">
-        <div class="warranty-box" style="margin-bottom:3rem;">
-          <h2>24 месеца</h2>
-          <p style="font-size:1.5rem; font-weight:700;">Гаранция</p>
-          <p style="margin-top:0.5rem;">на всеки ремонт, извършен в ТИМ КАР</p>
+      <div class="grid-2" style="align-items:stretch; gap:3rem;">
+        <div class="warranty-box" style="display:flex; flex-direction:column; justify-content:center;">
+          <h2>12</h2>
+          <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
+          <p style="margin-top:0.5rem;">за хидравлични ремонти</p>
+          <p style="margin-top:1rem; font-size:0.9rem; opacity:0.85;">Рейки, помпи, цилиндри, хидромотори и редуктори</p>
         </div>
+        <div class="warranty-box" style="background:var(--dark); display:flex; flex-direction:column; justify-content:center;">
+          <h2>*</h2>
+          <p style="font-size:1.5rem; font-weight:700;">Зависи от ремонта</p>
+          <p style="margin-top:0.5rem;">за останалите видове ремонти</p>
+          <p style="margin-top:1rem; font-size:0.9rem; opacity:0.85;">Ходова, ел. система, двигател и др. - гаранцията се уточнява при предаване</p>
+        </div>
+      </div>
+
+      <div style="max-width:800px; margin:3rem auto 0; text-align:center;">
         <p style="font-size:1.1rem; color:#555; margin-bottom:1.5rem;">
-          Качеството на нашата работа е нашата визитка. Затова не се страхуваме да я покрием с 24-месечна гаранция — без малкия шрифт.
+          Качеството на нашата работа е нашата визитка. За хидравличните ремонти - рейки, помпи и цилиндри - даваме 12-месечна гаранция, защото сме сигурни в резултата.
         </p>
         <p style="font-size:1.1rem; color:#555; margin-bottom:1.5rem;">
-          Ако след ремонта се появи проблем, свързан с нашата работа или вложените части, ние го отстраняваме безплатно. Толкова просто.
+          За другите видове ремонти гаранцията зависи от конкретната работа, вложените части и начина на ползване - уточняваме я писмено при предаване на автомобила.
+        </p>
+        <p style="font-size:1.1rem; color:#555;">
+          Ако след ремонта се появи проблем, свързан с нашата работа или вложените части, ние го отстраняваме безплатно.
         </p>
       </div>
     </div>
@@ -38,17 +51,26 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">✅</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
           <h3>Изпълнение на ремонта</h3>
           <p>Покрива всички дефекти, настъпили поради грешка при ремонта или неправилен монтаж.</p>
         </div>
         <div class="card">
-          <div class="card-icon">✅</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
           <h3>Вложени резервни части</h3>
           <p>Ако вложена от нас част се окаже дефектна, я подменяме без допълнително заплащане.</p>
         </div>
         <div class="card">
-          <div class="card-icon">✅</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
           <h3>Безплатен гаранционен ремонт</h3>
           <p>При установен гаранционен случай, ремонтът се извършва приоритетно и без такса.</p>
         </div>

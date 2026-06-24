@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Хидравлични помпи">
@@ -9,23 +9,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/remont-pompi">Ремонт на помпи</a> / Хидравлични помпи</div>
+    <div class="container"><a href="./">Начало</a> / <a href="remont-pompi">Ремонт на помпи</a> / Хидравлични помпи</div>
   </div>
 
   <section>
     <div class="container">
       <div class="grid-2" style="align-items:center; gap:3rem;">
         <div>
-          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Кога помпата трябва да се ремонтира</h2>
-          <p style="margin-bottom:1rem;">Хидравличната помпа за усилвател изгражда налягането, което облекчава въртенето на волана. Когато се появят течове, шумове или усилието нарастне — помпата е проблемът.</p>
-          <p style="margin-bottom:1rem;">Ремонтираме помпи за леки автомобили, бусове и камиони. Подменяме само дефектните части — ротори, лопатки, уплътнения — без да сменяме цялата помпа, ако не е наложително.</p>
-          <p>Работим бързо — в повечето случаи ремонтът е готов в рамките на 48 часа.</p>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem; color:var(--dark)">Помпата пищи - обикновено има решение</h2>
+          <p style="margin-bottom:1rem;">Характерното писукане при завиване или тежкото кормило при паркиране са сигналите, по които разпознаваме проблем с помпата. Понякога е и просто теч - резервоарът губи масло и системата работи на ниско ниво.</p>
+          <p style="margin-bottom:1rem;">Разглобяваме помпата и гледаме ротора, лопатките и уплътненията. В голяма част от случаите се подменят само износените елементи - не цялата помпа. Ремонтираме помпи за леки коли, бусове и камиони.</p>
+          <p>Повечето ремонти приключват в рамките на работния ден - имаме части на склад за най-разпространените модели.</p>
         </div>
         <div>
           <div class="warranty-box">
-            <h2>24</h2>
+            <h2>12</h2>
             <p style="font-size:1.5rem; font-weight:700;">Месеца гаранция</p>
-            <p style="margin-top:0.5rem;">на всеки извършен ремонт</p>
+            <p style="margin-top:0.5rem;">на хидравлични ремонти</p>
           </div>
         </div>
       </div>
@@ -40,19 +40,27 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">📉</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+            <polyline points="17 18 23 18 23 12"/>
+          </svg>
           <h3>Тежко кормило</h3>
           <p>При ниска скорост или паркиране волановото усилие е значително по-голямо от обичайното.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🔊</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          </svg>
           <h3>Писукане при завиване</h3>
-          <p>Характерен звук при въртене на волана — особено до крайно положение — е типичен сигнал от помпата.</p>
+          <p>Характерен звук при въртене на волана - особено до крайно положение - е типичен сигнал от помпата.</p>
         </div>
         <div class="card">
-          <div class="card-icon">💧</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
           <h3>Ниско ниво на масло</h3>
-          <p>Резервоарът на хидравличното масло редовно губи ниво — течът идва от помпата или тръбните връзки.</p>
+          <p>Резервоарът на хидравличното масло редовно губи ниво - течът идва от помпата или тръбните връзки.</p>
         </div>
       </div>
     </div>
@@ -61,8 +69,8 @@ import Layout from '../../layouts/Layout.astro';
   <section>
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Запитване за ремонт</h2>
-      <p style="margin-bottom:2rem;">Обадете се или напишете — ще ви отговорим бързо с цена и срок.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <p style="margin-bottom:2rem;">Обадете се или напишете - ще ви отговорим бързо с цена и срок.</p>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>

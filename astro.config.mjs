@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://dtapplications.github.io',
-  base: '/serviceapp',
+  site: process.env.SITE ?? 'http://localhost:4321',
+  base: process.env.BASE ?? '/',
   output: 'static',
 });

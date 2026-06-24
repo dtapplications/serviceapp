@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Автомобилно обслужване">
@@ -9,7 +9,7 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
   <div class="breadcrumb">
-    <div class="container"><a href="/">Начало</a> / <a href="/uslugi">Услуги</a> / Автомобилно обслужване</div>
+    <div class="container"><a href="./">Начало</a> / <a href="uslugi">Услуги</a> / Автомобилно обслужване</div>
   </div>
 
   <section>
@@ -20,42 +20,76 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">🌬️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>
+          </svg>
           <h3>EGR, турбо и инжектори</h3>
           <p>Почистване на EGR клапани, проверка и почистване на турбокомпресори и горивни инжектори без демонтаж.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🔋</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+            <line x1="12" y1="2" x2="12" y2="12"/>
+          </svg>
           <h3>Стартери и алтернатори</h3>
-          <p>Диагностика, ремонт или смяна на стартери и алтернатори — при проблеми с палене или зареждане на акумулатора.</p>
+          <p>Диагностика, ремонт или смяна на стартери и алтернатори - при проблеми с палене или зареждане на акумулатора.</p>
         </div>
         <div class="card">
-          <div class="card-icon">⚙️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
           <h3>Съединители</h3>
           <p>Смяна на съединителен диск, натискова плоча и лагер за механични скоростни кутии.</p>
         </div>
         <div class="card">
-          <div class="card-icon">⏱️</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
           <h3>Ангренажни ремъци и вериги</h3>
-          <p>Смяна по километраж или при симптоми — предотвратявате скъп ремонт на двигателя.</p>
+          <p>Смяна по километраж или при симптоми - предотвратявате скъп ремонт на двигателя.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🚗</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <path d="M16 8h4l3 3v3h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
           <h3>Ходова и окачване</h3>
           <p>Преглед и смяна на амортисьори, пружини, накрайници, стабилизаторни щанги и носачи.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🛑</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
+            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+          </svg>
           <h3>Спирачна система</h3>
           <p>Смяна на накладки, дискове и барабани, проверка на спирачните цилиндри и маркучи.</p>
         </div>
         <div class="card">
-          <div class="card-icon">💻</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+            <path d="M7 8h2l2 3 2-6 2 3h2"/>
+          </svg>
           <h3>Компютърна диагностика</h3>
           <p>Четене и изчистване на грешки, проверка на сензори и адаптации за всички марки.</p>
         </div>
         <div class="card">
-          <div class="card-icon">📐</div>
+          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="3"/>
+            <line x1="12" y1="2" x2="12" y2="5"/>
+            <line x1="12" y1="19" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="5" y2="12"/>
+            <line x1="19" y1="12" x2="22" y2="12"/>
+          </svg>
           <h3>Геометрия на оси</h3>
           <p>Регулиране на сходимост и геометрия на предна и задна ос с прецизен стенд.</p>
         </div>
@@ -67,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container" style="text-align:center">
       <h2 style="margin-bottom:1rem;">Запишете час</h2>
       <p style="margin-bottom:2rem;">Обадете ни се или изпратете запитване и ще намерим удобно за вас време.</p>
-      <a href="/kontakti" class="btn">Свържете се с нас</a>
+      <a href="kontakti" class="btn">Свържете се с нас</a>
     </div>
   </section>
 </Layout>
