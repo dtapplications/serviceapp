@@ -1,4 +1,5 @@
 ﻿---
+import '../styles/global.css';
 export interface Props {
   title?: string;
   description?: string;
@@ -13,7 +14,6 @@ const { title = 'ТИМ КАР', description = 'Специализиран се�
     <meta name="description" content={description} />
     <title>{title} | ТИМ КАР</title>
     <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.png`} type="image/png" />
-    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles/global.css`} />
   </head>
   <body>
     <header>
