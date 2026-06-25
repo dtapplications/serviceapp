@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(python3 -c ' *)",
+      "Bash(powershell -command \"'{0:N0}KB' -f \\(\\(Get-Item 'c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/public/favicon.png'\\).Length / 1KB\\)\")",
+      "Read(//c/Users/Bat-Dobri/Downloads/**)",
+      "Bash(unzip -l favicon_io.zip)",
+      "Bash(unzip -o favicon_io.zip -d favicon_io)",
+      "Bash(cp \"C:/Users/Bat-Dobri/Downloads/favicon_io/favicon.ico\" \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/public/favicon.ico\")",
+      "Bash(cp \"C:/Users/Bat-Dobri/Downloads/favicon_io/favicon-32x32.png\" \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/public/favicon-32x32.png\")",
+      "Bash(cp \"C:/Users/Bat-Dobri/Downloads/favicon_io/apple-touch-icon.png\" \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/public/apple-touch-icon.png\")",
+      "Bash(cp \"C:/Users/Bat-Dobri/Downloads/favicon_io/android-chrome-192x192.png\" \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/public/android-chrome-192x192.png\")",
+      "Bash(cp \"C:/Users/Bat-Dobri/Downloads/favicon_io/android-chrome-512x512.png\" \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/public/android-chrome-512x512.png\")",
+      "Bash(npm install *)",
+      "Bash(npm ls *)",
+      "Bash(node -e ' *)",
+      "WebFetch(domain:www.oink.bg)",
+      "Bash(mkdir -p \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/src/assets/gallery\" && cp C:/Users/Bat-Dobri/Desktop/timcar/galery/*.jpg \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/src/assets/gallery/\")",
+      "Bash(mkdir -p \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/public/images/gallery\")",
+      "Bash(curl -sO \"https://cdn.oink.bg/gallery/21103/f38d58f9-b112-40b9-8585-03d91da9484a_large.webp\")",
+      "Bash(curl -sO \"https://cdn.oink.bg/gallery/21103/e41037c0-eee7-431d-aa82-ae79470fb7a4_medium.webp\")",
+      "Bash(curl -sO \"https://cdn.oink.bg/gallery/21103/efc25664-6dc0-45cc-a468-64b4c027cae0_medium.webp\")",
+      "Bash(curl -sO \"https://cdn.oink.bg/gallery/21103/334e69d0-5175-4b5d-885a-2715e9ff5924_medium.webp\")",
+      "Bash(mv \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/public/images/gallery/\"*.webp \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/src/assets/gallery/\" && ls \"c:/Users/Bat-Dobri/Desktop/timcar/serviceapp/src/assets/gallery/\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Bat-Dobri\\Desktop\\timcar\\galery",
+      "c:\\Users\\Bat-Dobri\\Desktop\\timcar\\serviceapp\\public\\images\\gallery"
+    ]
+  }
+}

@@ -1,12 +1,14 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import workshopSrc from '../assets/workshop.jpg';
 const base = import.meta.env.BASE_URL;
 ---
-<Layout title="Начало">
+<Layout title="ТИМ КАР" description="Сервиз за хидравлични рейки, помпи и пълен авторемонт в София. Спирачки, съединители, окачване, диагностика. Ремонтираме, вместо да заменяме. Обадете се: 0888 308 666.">
 
   <!-- HERO -->
   <section style="position:relative; background:var(--panel); color:#EDEAE2; padding:0; overflow:hidden;">
-    <img src={`${base}images/hero-bg.webp`} alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; filter:brightness(.32) saturate(.55);" />
+    <img src={`${base}images/hero-bg.webp`} alt="" aria-hidden="true" fetchpriority="high" loading="eager" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; filter:brightness(.32) saturate(.55);" />
     <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(to bottom, rgba(23,24,26,.6) 0%, rgba(23,24,26,.45) 50%, rgba(23,24,26,.75) 100%); box-shadow:inset 0 0 120px 24px rgba(23,24,26,.7);"></div>
     <div class="container" style="position:relative; z-index:1;">
       <div class="hero-content" style="padding:96px 0 88px; max-width:860px; margin:0 auto; text-align:center;">
@@ -24,18 +26,18 @@ const base = import.meta.env.BASE_URL;
           <a href={`${base}kontakti`} class="btn">Безплатна диагностика</a>
           <a href={`${base}uslugi`} class="btn btn-outline">Нашите услуги →</a>
         </div>
-        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px; border-top:1px solid rgba(255,255,255,.1); padding-top:26px; text-align:left;">
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px; border-top:1px solid rgba(255,255,255,.1); padding-top:26px; text-align:center;">
           <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">48ч</div>
-            <div style="font-size:12px; color:#8E8A82; margin-top:3px;">среден срок</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">15+</div>
+            <div style="font-size:12px; color:#8E8A82; margin-top:3px;">вида услуги</div>
           </div>
           <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">12&nbsp;мес</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">12&nbsp;м*</div>
             <div style="font-size:12px; color:#8E8A82; margin-top:3px;">гаранция</div>
           </div>
           <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">10к+</div>
-            <div style="font-size:12px; color:#8E8A82; margin-top:3px;">клиенти</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">1000+</div>
+            <div style="font-size:12px; color:#8E8A82; margin-top:3px;">доволни клиенти</div>
           </div>
           <div>
             <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">∅</div>
@@ -151,11 +153,11 @@ const base = import.meta.env.BASE_URL;
           Не препоръчваме нова рейка или помпа, ако старата може да се поправи. Преди да пипнем каквото и да е - обясняваме какво сме открили и колко ще струва. Без изненади на касата.
         </p>
         <p style="font-size:17px; color:#B4B0A8; line-height:1.6; max-width:480px;">
-          Повечето случаи завършват с ремонт на място, до 48 часа, с писмена гаранция.
+          При демонтирана от ваша страна хидравлична рейка, помпа или секторна кутия - ремонтът се извършва в рамките на деня. Ако е необходим и демонтаж от наша страна, срокът е до един-два работни дни.
         </p>
       </div>
       <div class="statement-img-col" style="position:relative; margin:48px 0; min-height:340px; border:1px solid rgba(255,255,255,.1); overflow:hidden;">
-        <img src={`${base}images/workshop.jpg`} alt="Сервиз" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; filter:brightness(.65) grayscale(.15);" />
+        <Image src={workshopSrc} alt="Сервиз" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; filter:brightness(.65) grayscale(.15);" loading="lazy" />
       </div>
     </div>
   </section>
@@ -179,7 +181,7 @@ const base = import.meta.env.BASE_URL;
         <div class="step">
           <span class="step-num">03</span>
           <h3>Ремонт</h3>
-          <p>Ремонт, не замяна. В повечето случаи готово до 48 часа.</p>
+          <p>Ремонт, не замяна. Демонтирана рейка или помпа - в рамките на деня.</p>
         </div>
         <div class="step">
           <span class="step-num">04</span>
@@ -196,10 +198,10 @@ const base = import.meta.env.BASE_URL;
       <h2 style="font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-.02em; margin-bottom:44px;">Защо клиентите се връщат</h2>
       <div class="trust-grid">
         <div class="trust-item">
-          <div class="trust-key">48Ч</div>
+          <div class="trust-key">1-2 дни</div>
           <div class="trust-bar"></div>
-          <h3>Среден срок</h3>
-          <p>Голям склад от части - повечето ремонти готови до следващия работен ден.</p>
+          <h3>Срок за ремонт</h3>
+          <p>Демонтирана рейка или помпа - в рамките на деня. С демонтаж от наша страна - до два работни дни.</p>
         </div>
         <div class="trust-item">
           <div class="trust-key">12 МЕС</div>

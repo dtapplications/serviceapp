@@ -1,12 +1,46 @@
 ---
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
+import { Image } from 'astro:assets';
+import logoSrc from '../assets/logo.png';
 export interface Props {
   title?: string;
   description?: string;
 }
 const { title = 'ТИМ КАР', description = 'Специализиран сервиз за хидравлични рейки, помпи и авторемонт. Ремонт, не замяна.' } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const pageTitle = title === 'ТИМ КАР' ? 'ТИМ КАР - Авто хидравлика и сервиз' : `${title} | ТИМ КАР`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL(import.meta.env.BASE_URL + 'images/og-image.jpg', Astro.site).href;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AutoRepair',
+  name: 'ТИМ КАР',
+  url: 'https://timcar.com',
+  telephone: '+359888308666',
+  email: 'office@timcar.com',
+  description: 'Специализиран сервиз за хидравлични рейки, помпи и цилиндри. Пълен авторемонт - спирачки, съединители, окачване. Ремонтираме, вместо да заменяме.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'ул. Проф. Атанас Иширков',
+    addressLocality: 'София',
+    postalCode: '1700',
+    addressCountry: 'BG',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 42.6475907,
+    longitude: 23.3477837,
+  },
+  openingHoursSpecification: [{
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
+    opens: '08:00',
+    closes: '18:00',
+  }],
+  sameAs: ['https://www.facebook.com/timcar'],
+  priceRange: '$$',
+};
 ---
 <!doctype html>
 <html lang="bg">
@@ -23,18 +57,35 @@ const base = import.meta.env.BASE_URL;
     </style>
     <base href={import.meta.env.BASE_URL} />
     <meta name="description" content={description} />
-    <title>{title} | ТИМ КАР</title>
-    <link rel="icon" href={`${base}favicon.png`} type="image/png" />
+    <title>{pageTitle}</title>
+    <link rel="canonical" href={canonicalURL} />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="bg_BG" />
+    <meta property="og:site_name" content="ТИМ КАР" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <link rel="icon" href={`${base}favicon.ico`} sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
     <ClientRouter />
   </head>
   <body>
     <header>
       <div class="header-inner">
         <a href={base} class="logo">
-          <img src={`${base}images/logo.png`} alt="ТИМ КАР" class="logo-img" />
+          <Image src={logoSrc} alt="ТИМ КАР" height={54} class="logo-img" loading="eager" />
         </a>
         <button class="nav-toggle" id="navToggle">☰</button>
         <nav id="mainNav">
@@ -68,6 +119,7 @@ const base = import.meta.env.BASE_URL;
             </li>
             <li><a href={`${base}garantsiya`}>Гаранция</a></li>
             <li><a href={`${base}polezno`}>Полезно</a></li>
+            <li><a href={`${base}galeria`}>Галерия</a></li>
             <li><a href={`${base}kontakti`}>Контакти</a></li>
           </ul>
         </nav>
@@ -91,7 +143,7 @@ const base = import.meta.env.BASE_URL;
         <div class="footer-grid">
           <div class="footer-col">
             <div class="footer-logo">
-              <img src={`${base}images/logo.png`} alt="ТИМ КАР" style="height:52px; width:auto;" />
+              <Image src={logoSrc} alt="ТИМ КАР" height={52} style="width:auto;" />
             </div>
             <p>Сервиз за хидравлични рейки, помпи и авторемонт. Бърза диагностика и качествен ремонт с гаранция.</p>
           </div>
