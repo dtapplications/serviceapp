@@ -36,7 +36,7 @@ const base = import.meta.env.BASE_URL;
             <div style="font-size:12px; color:#8E8A82; margin-top:3px;">гаранция</div>
           </div>
           <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">1000+</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">1к+</div>
             <div style="font-size:12px; color:#8E8A82; margin-top:3px;">доволни клиенти</div>
           </div>
           <div>
@@ -145,7 +145,7 @@ const base = import.meta.env.BASE_URL;
 
   <!-- STATEMENT BAND -->
   <section style="background:var(--panel); color:#EDEAE2; padding:0; overflow:hidden;">
-    <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:stretch;">
+    <div class="container statement-grid">
       <div style="padding:84px 0;">
         <span class="section-label">(02)&nbsp;&nbsp;ПОДХОД</span>
         <h2 style="font-size:clamp(30px,3.8vw,48px); font-weight:800; letter-spacing:-.02em; line-height:1.05; margin-bottom:22px; color:#EDEAE2;">Ремонт, не замяна.</h2>
@@ -343,3 +343,26 @@ const base = import.meta.env.BASE_URL;
   </section>
 
 </Layout>
+
+<style>
+  .statement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: stretch;
+  }
+
+  @media (max-width: 768px) {
+    .statement-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .statement-grid > div:first-child {
+      padding: 48px 0 32px;
+    }
+    .statement-img-col {
+      margin: 0 0 48px;
+      min-height: 240px;
+    }
+  }
+</style>

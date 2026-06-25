@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://timcar.com/sitemap-index.xml
+Sitemap: https://timcar.bg/sitemap-index.xml

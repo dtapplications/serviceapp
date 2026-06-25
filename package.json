@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "build:github": "cross-env SITE=https://dtapplications.github.io BASE=/serviceapp/ astro build",
-    "build:production": "cross-env SITE=https://timcar.com astro build",
+    "build:production": "cross-env SITE=https://timcar.bg astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
