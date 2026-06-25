@@ -50,13 +50,18 @@ const base = import.meta.env.BASE_URL;
 
         <div>
           <h3 style="font-size:1.3rem; margin-bottom:1.5rem; color:var(--text)">Изпратете запитване</h3>
-          <form>
-            <input type="text" placeholder="Вашето име" required />
-            <input type="tel" placeholder="Телефон за връзка" required />
-            <input type="email" placeholder="Имейл адрес" />
-            <input type="text" placeholder="Марка и модел на автомобила" />
-            <textarea placeholder="Опишете проблема или услугата, от която се нуждаете..."></textarea>
-            <button type="submit" class="btn">Изпрати запитване</button>
+          <form id="contact-form">
+            <input type="hidden" name="access_key" value={import.meta.env.PUBLIC_WEB3FORMS_KEY} />
+            <input type="hidden" name="subject" value="Ново запитване от timcar.bg" />
+            <input type="hidden" name="from_name" value="ТИМ КАР сайт" />
+            <input type="hidden" name="redirect" value="false" />
+            <input type="text" name="name" placeholder="Вашето име" required />
+            <input type="tel" name="phone" placeholder="Телефон за връзка" required />
+            <input type="email" name="email" placeholder="Имейл адрес" />
+            <input type="text" name="car" placeholder="Марка и модел на автомобила" />
+            <textarea name="message" placeholder="Опишете проблема или услугата, от която се нуждаете..."></textarea>
+            <div id="form-notif" class="form-notif" role="alert"></div>
+            <button type="submit" id="submit-btn" class="btn">Изпрати запитване</button>
           </form>
         </div>
       </div>
@@ -79,4 +84,44 @@ const base = import.meta.env.BASE_URL;
       ></iframe>
     </div>
   </section>
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      const form = document.getElementById('contact-form') as HTMLFormElement | null;
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+        const notif = document.getElementById('form-notif') as HTMLElement;
+        const original = btn.textContent;
+
+        btn.disabled = true;
+        btn.textContent = 'Изпращане...';
+        notif.className = 'form-notif';
+        notif.textContent = '';
+
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(form),
+          });
+          const json = await res.json();
+          if (json.success) {
+            notif.className = 'form-notif success';
+            notif.textContent = 'Запитването е изпратено успешно! Ще се свържем с вас скоро.';
+            form.reset();
+          } else {
+            throw new Error(json.message);
+          }
+        } catch {
+          notif.className = 'form-notif error';
+          notif.textContent = 'Грешка при изпращане. Опитайте отново или ни пишете на office@timcar.com.';
+        } finally {
+          btn.disabled = false;
+          btn.textContent = original;
+          notif.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
+  </script>
 </Layout>

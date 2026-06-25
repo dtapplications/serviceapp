@@ -566,6 +566,18 @@ form input, form textarea, form select {
 form input:focus, form textarea:focus { border-color: var(--accent); }
 form textarea { min-height: 120px; resize: vertical; }
 
+.form-notif {
+  display: none;
+  padding: 14px 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-left: 3px solid;
+}
+.form-notif.success { display: block; background: #F0FAF4; border-color: #2D9B5A; color: #1C6B3C; }
+.form-notif.error   { display: block; background: #FEF2F2; border-color: #E53935; color: #9B1C1C; }
+
+form button[type="submit"]:disabled { opacity: .6; cursor: not-allowed; filter: none; }
+
 /* FOOTER */
 footer {
   background: var(--panel);
