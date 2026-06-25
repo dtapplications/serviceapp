@@ -3,208 +3,341 @@ import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Начало">
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>ТИМ КАР - <span>Авто Хидравлика</span> и Сервиз</h1>
-      <p>Специализирани в ремонт на хидравлични рейки, помпи и цилиндри. Извършваме и пълно авторемонтно обслужване - диагностика, спирачки, окачване, съединители и още. Доверете ни автомобила си.</p>
-      <a href={`${base}kontakti`} class="btn">Свържете се с нас</a>
-      <a href={`${base}uslugi`} class="btn btn-outline">Нашите услуги</a>
+
+  <!-- HERO -->
+  <section style="position:relative; background:var(--panel); color:#EDEAE2; padding:0; overflow:hidden;">
+    <img src={`${base}images/hero-bg.webp`} alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; filter:brightness(.32) saturate(.55);" />
+    <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(to bottom, rgba(23,24,26,.6) 0%, rgba(23,24,26,.45) 50%, rgba(23,24,26,.75) 100%); box-shadow:inset 0 0 120px 24px rgba(23,24,26,.7);"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <div class="hero-content" style="padding:96px 0 88px; max-width:860px; margin:0 auto; text-align:center;">
+        <div style="display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:30px;">
+          <span style="width:30px; height:2px; background:var(--accent);"></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.18em; color:#8E8A82;">АВТО&nbsp;ХИДРАВЛИКА · СЕРВИЗ</span>
+        </div>
+        <h1 style="font-size:clamp(38px,5.2vw,68px); font-weight:800; line-height:.98; letter-spacing:-.025em; margin-bottom:26px; text-shadow:0 2px 16px rgba(0,0,0,.75);">
+          Сервиз за <span style="color:var(--accent);">хидравлика</span> и пълен авторемонт.
+        </h1>
+        <p style="font-size:18px; line-height:1.6; color:#EDEAE2; max-width:680px; margin:0 auto 36px; text-shadow:0 1px 10px rgba(0,0,0,.85);">
+          Специализирани в хидравлични рейки, помпи и цилиндри - и правим всичко останало: спирачки, съединители, окачване, ангренажни ремъци и компютърна диагностика. Ремонтираме, вместо да заменяме.
+        </p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-bottom:56px;">
+          <a href={`${base}kontakti`} class="btn">Безплатна диагностика</a>
+          <a href={`${base}uslugi`} class="btn btn-outline">Нашите услуги →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px; border-top:1px solid rgba(255,255,255,.1); padding-top:26px; text-align:left;">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">48ч</div>
+            <div style="font-size:12px; color:#8E8A82; margin-top:3px;">среден срок</div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">12&nbsp;мес</div>
+            <div style="font-size:12px; color:#8E8A82; margin-top:3px;">гаранция</div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">10к+</div>
+            <div style="font-size:12px; color:#8E8A82; margin-top:3px;">клиенти</div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--accent);">∅</div>
+            <div style="font-size:12px; color:#8E8A82; margin-top:3px;">скрити такси</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Stats -->
-  <div class="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat">
-          <h3>48ч</h3>
-          <p>Среден срок на ремонт</p>
-        </div>
-        <div class="stat">
-          <h3>10 000+</h3>
-          <p>Доволни клиенти</p>
-        </div>
-        <div class="stat">
-          <h3>5000+</h3>
-          <p>Ремонтирани компонента</p>
-        </div>
-        <div class="stat">
-          <h3>✔</h3>
-          <p>Безплатна диагностика</p>
-        </div>
-      </div>
+  <!-- BRAND TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">VOLKSWAGEN</span>
+      <span class="ticker-item">BMW</span>
+      <span class="ticker-item">MERCEDES</span>
+      <span class="ticker-item">TOYOTA</span>
+      <span class="ticker-item">VOLVO</span>
+      <span class="ticker-item">FORD</span>
+      <span class="ticker-item">RENAULT</span>
+      <span class="ticker-item">AUDI</span>
+      <span class="ticker-item">OPEL</span>
+      <span class="ticker-item">PEUGEOT</span>
+      <span class="ticker-item">VOLKSWAGEN</span>
+      <span class="ticker-item">BMW</span>
+      <span class="ticker-item">MERCEDES</span>
+      <span class="ticker-item">TOYOTA</span>
+      <span class="ticker-item">VOLVO</span>
+      <span class="ticker-item">FORD</span>
+      <span class="ticker-item">RENAULT</span>
+      <span class="ticker-item">AUDI</span>
+      <span class="ticker-item">OPEL</span>
+      <span class="ticker-item">PEUGEOT</span>
     </div>
   </div>
 
-  <!-- Services -->
-  <section class="gray-bg">
+  <!-- SERVICES -->
+  <section id="services">
     <div class="container">
-      <div class="section-title">
-        <h2>Какво правим</h2>
-        <p>Хидравлика и авторемонт - всичко на едно място</p>
-        <div class="line"></div>
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:48px; flex-wrap:wrap;">
+        <div>
+          <span class="section-label">(01)&nbsp;&nbsp;УСЛУГИ</span>
+          <h2 style="font-size:clamp(28px,3.4vw,44px); font-weight:800; letter-spacing:-.02em; line-height:1.02; max-width:560px;">Хидравлика и авторемонт - всичко на едно място.</h2>
+        </div>
+        <p style="font-size:15px; color:var(--text-muted); max-width:280px; line-height:1.55;">Шест направления, един екип. Без да ходите от сервиз на сервиз.</p>
       </div>
       <div class="grid-3">
-        <div class="card card-img">
-          <div class="card-photo" style="background-image:url('https://images.unsplash.com/photo-1702146713858-8e7d1cc29fe8?w=600&q=70&fit=crop')"></div>
-          <div class="card-body">
-            <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            <h3>Ремонт на хидравлични рейки</h3>
-            <p>Хидравлични, EPS и механични кормилни рейки за всички марки и модели.</p>
-            <a href={`${base}remont-reyki`} class="read-more">Прочети повече →</a>
+        <a href={`${base}remont-reyki`} class="card" style="display:block; text-decoration:none; color:inherit;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:var(--accent);">01</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#9B978F; border:1px solid var(--line); padding:3px 8px;">РЕЙКИ</span>
           </div>
-        </div>
-        <div class="card card-img">
-          <div class="card-photo" style="background-image:url('https://images.unsplash.com/photo-1527383418406-f85a3b146499?w=600&q=70&fit=crop')"></div>
-          <div class="card-body">
-            <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
-            <h3>Ремонт на хидравлични помпи</h3>
-            <p>Зъбчати, бутални и хидравлични помпи за автомобили и специална техника.</p>
-            <a href={`${base}remont-pompi`} class="read-more">Прочети повече →</a>
+          <h3>Хидравлични рейки</h3>
+          <p style="margin-bottom:20px;">Хидравлични, EPS и механични кормилни рейки за всички марки и модели.</p>
+          <span class="read-more">Прочети повече →</span>
+        </a>
+        <a href={`${base}remont-pompi`} class="card" style="display:block; text-decoration:none; color:inherit;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:var(--accent);">02</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#9B978F; border:1px solid var(--line); padding:3px 8px;">ПОМПИ</span>
           </div>
-        </div>
-        <div class="card card-img">
-          <div class="card-photo" style="background-image:url('https://images.unsplash.com/photo-1766157669300-8ade8059b379?w=600&q=70&fit=crop')"></div>
-          <div class="card-body">
-            <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-            <h3>Хидравлични цилиндри и мотори</h3>
-            <p>Ремонт на хидравлични цилиндри, хидромотори и редуктори за всякаква техника.</p>
-            <a href={`${base}uslugi/hidravlichni-tsilindri`} class="read-more">Прочети повече →</a>
+          <h3>Хидравлични помпи</h3>
+          <p style="margin-bottom:20px;">Зъбчати, бутални и хидравлични помпи за автомобили и специална техника.</p>
+          <span class="read-more">Прочети повече →</span>
+        </a>
+        <a href={`${base}uslugi/hidravlichni-tsilindri`} class="card" style="display:block; text-decoration:none; color:inherit;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:var(--accent);">03</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#9B978F; border:1px solid var(--line); padding:3px 8px;">ХИДРАВЛИКА</span>
           </div>
-        </div>
-        <div class="card card-img">
-          <div class="card-photo" style="background-image:url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&q=70&fit=crop')"></div>
-          <div class="card-body">
-            <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            <h3>Авторемонтно обслужване</h3>
-            <p>Спирачки, окачване, съединители, ангренажни ремъци, стартери и алтернатори.</p>
-            <a href={`${base}uslugi/avtomobilno-obsluzhvane`} class="read-more">Прочети повече →</a>
+          <h3>Цилиндри и хидромотори</h3>
+          <p style="margin-bottom:20px;">Ремонт на хидравлични цилиндри, хидромотори и редуктори за всякаква техника.</p>
+          <span class="read-more">Прочети повече →</span>
+        </a>
+        <a href={`${base}uslugi/avtomobilno-obsluzhvane`} class="card" style="display:block; text-decoration:none; color:inherit;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:var(--accent);">04</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#9B978F; border:1px solid var(--line); padding:3px 8px;">СЕРВИЗ</span>
           </div>
-        </div>
-        <div class="card card-img">
-          <div class="card-photo" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70&fit=crop')"></div>
-          <div class="card-body">
-            <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            <h3>Компютърна диагностика</h3>
-            <p>Пълна електронна диагностика и изчистване на грешки с модерна апаратура.</p>
-            <a href={`${base}uslugi`} class="read-more">Прочети повече →</a>
+          <h3>Авторемонтно обслужване</h3>
+          <p style="margin-bottom:20px;">Спирачки, окачване, съединители, ангренажни ремъци, стартери и алтернатори.</p>
+          <span class="read-more">Прочети повече →</span>
+        </a>
+        <a href={`${base}uslugi/diagnostika`} class="card" style="display:block; text-decoration:none; color:inherit;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:var(--accent);">05</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#9B978F; border:1px solid var(--line); padding:3px 8px;">ДИАГНОСТИКА</span>
           </div>
-        </div>
-        <div class="card card-img">
-          <div class="card-photo" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70&fit=crop')"></div>
-          <div class="card-body">
-            <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
-            <h3>Геометрия на оси</h3>
-            <p>Прецизно регулиране на геометрията на предна и задна ос за безопасно шофиране.</p>
-            <a href={`${base}uslugi`} class="read-more">Прочети повече →</a>
+          <h3>Компютърна диагностика</h3>
+          <p style="margin-bottom:20px;">Пълна електронна диагностика и изчистване на грешки с модерна апаратура.</p>
+          <span class="read-more">Прочети повече →</span>
+        </a>
+        <a href={`${base}uslugi/diagnostika`} class="card" style="display:block; text-decoration:none; color:inherit;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:var(--accent);">06</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#9B978F; border:1px solid var(--line); padding:3px 8px;">ГЕОМЕТРИЯ</span>
           </div>
-        </div>
+          <h3>Геометрия на оси</h3>
+          <p style="margin-bottom:20px;">Прецизно регулиране на геометрията на предна и задна ос за безопасно шофиране.</p>
+          <span class="read-more">Прочети повече →</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Why us -->
+  <!-- STATEMENT BAND -->
+  <section style="background:var(--panel); color:#EDEAE2; padding:0; overflow:hidden;">
+    <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:stretch;">
+      <div style="padding:84px 0;">
+        <span class="section-label">(02)&nbsp;&nbsp;ПОДХОД</span>
+        <h2 style="font-size:clamp(30px,3.8vw,48px); font-weight:800; letter-spacing:-.02em; line-height:1.05; margin-bottom:22px; color:#EDEAE2;">Ремонт, не замяна.</h2>
+        <p style="font-size:17px; color:#B4B0A8; line-height:1.6; max-width:480px; margin-bottom:18px;">
+          Не препоръчваме нова рейка или помпа, ако старата може да се поправи. Преди да пипнем каквото и да е - обясняваме какво сме открили и колко ще струва. Без изненади на касата.
+        </p>
+        <p style="font-size:17px; color:#B4B0A8; line-height:1.6; max-width:480px;">
+          Повечето случаи завършват с ремонт на място, до 48 часа, с писмена гаранция.
+        </p>
+      </div>
+      <div class="statement-img-col" style="position:relative; margin:48px 0; min-height:340px; border:1px solid rgba(255,255,255,.1); overflow:hidden;">
+        <img src={`${base}images/workshop.jpg`} alt="Сервиз" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; filter:brightness(.65) grayscale(.15);" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
   <section>
     <div class="container">
-      <div class="section-title">
-        <h2>Защо клиентите се връщат</h2>
-        <div class="line"></div>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-          </svg>
-          <h3>Ремонт, не замяна</h3>
-          <p>Не препоръчваме нова рейка или помпа, ако старата може да се поправи. Повечето случаи завършват с ремонт на място.</p>
+      <span class="section-label">(03)&nbsp;&nbsp;КАК РАБОТИМ</span>
+      <h2 style="font-size:clamp(28px,3.4vw,44px); font-weight:800; letter-spacing:-.02em; line-height:1.02; margin-bottom:48px; max-width:520px;">От диагностика до гаранция - четири стъпки.</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Диагностика</h3>
+          <p>Безплатна диагностика и оглед на компонента или автомобила.</p>
         </div>
-        <div class="card">
-          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
-            <rect x="9" y="3" width="6" height="4" rx="1"/>
-            <path d="M9 12h6M9 16h4"/>
-          </svg>
-          <h3>Казваме какво е проблемът</h3>
-          <p>Преди да пипнем каквото и да е - обясняваме какво сме открили и колко ще струва. Без изненади на касата.</p>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Оферта</h3>
+          <p>Казваме какво е проблемът и колко ще струва - преди да започнем работа.</p>
         </div>
-        <div class="card">
-          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
-          <h3>48 часа в повечето случаи</h3>
-          <p>Разполагаме с голям склад от части и в повечето случаи ремонтът е готов до края на следващия работен ден.</p>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Ремонт</h3>
+          <p>Ремонт, не замяна. В повечето случаи готово до 48 часа.</p>
         </div>
-        <div class="card">
-          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <path d="m9 12 2 2 4-4"/>
-          </svg>
-          <h3>Гаранция на ремонта</h3>
-          <p>Хидравличните ремонти излизат с 12-месечна гаранция. За останалите видове - гаранцията се уточнява при предаване.</p>
-        </div>
-        <div class="card">
-          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="1" y="3" width="15" height="13" rx="2"/>
-            <path d="M16 8h4l3 3v3h-7V8z"/>
-            <circle cx="5.5" cy="18.5" r="2.5"/>
-            <circle cx="18.5" cy="18.5" r="2.5"/>
-          </svg>
-          <h3>Всякаква марка</h3>
-          <p>Volkswagen, BMW, Mercedes, Toyota, Volvo, Ford, Renault - работим с всичко. Няма "не поемаме тази марка".</p>
-        </div>
-        <div class="card">
-          <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="7" height="7" rx="1"/>
-            <rect x="14" y="3" width="7" height="7" rx="1"/>
-            <rect x="3" y="14" width="7" height="7" rx="1"/>
-            <rect x="14" y="14" width="7" height="7" rx="1"/>
-          </svg>
-          <h3>Хидравлика и авторемонт</h3>
-          <p>Рейки, помпи, цилиндри, ходова, геометрия, диагностика - всичко на едно място, без да ходите от сервиз на сервиз.</p>
+        <div class="step">
+          <span class="step-num">04</span>
+          <h3>Гаранция</h3>
+          <p>Хидравличните ремонти излизат с 12-месечна писмена гаранция.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="gray-bg">
+  <!-- TRUST -->
+  <section style="background:#FBFAF6; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:80px 0;">
     <div class="container">
-      <div class="section-title">
-        <h2>Какво казват клиентите ни</h2>
-        <div class="line"></div>
-      </div>
-      <div class="grid-2">
-        <div class="testimonial">
-          <blockquote>
-            „Донесох колата с течаща рейка - не можех да паркирам без усилие. За ден и половина ремонтът беше готов. Вече над година и никакъв проблем."
-          </blockquote>
-          <cite>
-            Г. Стефанов
-            <span>Клиент от София</span>
-          </cite>
+      <h2 style="font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-.02em; margin-bottom:44px;">Защо клиентите се връщат</h2>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-key">48Ч</div>
+          <div class="trust-bar"></div>
+          <h3>Среден срок</h3>
+          <p>Голям склад от части - повечето ремонти готови до следващия работен ден.</p>
         </div>
-        <div class="testimonial">
-          <blockquote>
-            „Ремонтираме хидравликата на нашата строителна техника тук от години. Работят бързо, обясняват какво е проблемът и не вкарват излишни разходи."
-          </blockquote>
-          <cite>
-            Д. Маринов
-            <span>Управител на строителна фирма</span>
-          </cite>
+        <div class="trust-item">
+          <div class="trust-key">12 МЕС</div>
+          <div class="trust-bar"></div>
+          <h3>Гаранция</h3>
+          <p>Хидравличните ремонти излизат с 12-месечна писмена гаранция.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-key">10К+</div>
+          <div class="trust-bar"></div>
+          <h3>Клиенти</h3>
+          <p>Хиляди доволни клиенти и фирми с техника, които се връщат при нас.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-key">ВСИЧКИ</div>
+          <div class="trust-bar"></div>
+          <h3>Марки</h3>
+          <p>VW, BMW, Mercedes, Toyota, Volvo, Ford, Renault - без изключения.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <span class="section-label">(04)&nbsp;&nbsp;ОТЗИВИ</span>
+      <h2 style="font-size:clamp(28px,3.4vw,44px); font-weight:800; letter-spacing:-.02em; margin-bottom:48px;">Какво казват клиентите ни</h2>
+
+      <div class="tc-carousel" id="tcCarousel">
+        <div class="tc-track">
+
+          <div class="tc-slide">
+            <div class="tc-pair">
+              <figure class="testimonial">
+                <div class="tc-quote">"</div>
+                <blockquote>Донесох колата с течаща рейка - не можех да паркирам без усилие. За ден и половина ремонтът беше готов. Вече над година и никакъв проблем.</blockquote>
+                <figcaption style="margin-top:24px;"><cite>Г. Стефанов<span>клиент от София</span></cite></figcaption>
+              </figure>
+              <figure class="testimonial">
+                <div class="tc-quote">"</div>
+                <blockquote>Ремонтираме хидравликата на нашата строителна техника тук от години. Работят бързо, обясняват какво е проблемът и не вкарват излишни разходи.</blockquote>
+                <figcaption style="margin-top:24px;"><cite>Д. Маринов<span>управител, строителна фирма</span></cite></figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="tc-slide">
+            <div class="tc-pair">
+              <figure class="testimonial">
+                <div class="tc-quote">"</div>
+                <blockquote>Имах проблем с хидравличната помпа - воланът ставаше тежък при тръгване. Диагностиката беше безплатна, ремонтът - евтин и с гаранция. Препоръчвам.</blockquote>
+                <figcaption style="margin-top:24px;"><cite>А. Попова<span>клиентка от Пловдив</span></cite></figcaption>
+              </figure>
+              <figure class="testimonial">
+                <div class="tc-quote">"</div>
+                <blockquote>Проблем с окачването след голяма дупка. Намериха точно какво е счупено, смениха само нужното и ми дадоха геометрия. Колата е като нова.</blockquote>
+                <figcaption style="margin-top:24px;"><cite>В. Николов<span>клиент от Варна</span></cite></figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="tc-slide">
+            <div class="tc-pair">
+              <figure class="testimonial">
+                <div class="tc-quote">"</div>
+                <blockquote>Бях скептичен дали рейката може да се поправи - навсякъде ми казваха да я сменя. Тук я ремонтираха за 180 лева. Работи перфектно вече 14 месеца.</blockquote>
+                <figcaption style="margin-top:24px;"><cite>К. Иванов<span>клиент от София</span></cite></figcaption>
+              </figure>
+              <figure class="testimonial">
+                <div class="tc-quote">"</div>
+                <blockquote>Бутална помпа от специализирана машина. Не очаквах да я намерят, а тя беше готова за два дни. Спести ни поне 3 пъти повече отколкото струваше ремонтът.</blockquote>
+                <figcaption style="margin-top:24px;"><cite>М. Георгиева<span>управител, транспортна фирма</span></cite></figcaption>
+              </figure>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tc-nav">
+          <button class="tc-btn tc-prev" aria-label="Предишен">←</button>
+          <div class="tc-dots">
+            <span class="tc-dot active"></span>
+            <span class="tc-dot"></span>
+            <span class="tc-dot"></span>
+          </div>
+          <button class="tc-btn tc-next" aria-label="Следващ">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function initCarousel() {
+      const carousel = document.getElementById('tcCarousel');
+      if (!carousel) return;
+      const track = carousel.querySelector('.tc-track') as HTMLElement;
+      const slides = carousel.querySelectorAll('.tc-slide');
+      const dots = carousel.querySelectorAll('.tc-dot');
+      let current = 0;
+      let timer: ReturnType<typeof setInterval>;
+
+      function goTo(n: number) {
+        current = ((n % slides.length) + slides.length) % slides.length;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(current + 1), 6000);
+      }
+
+      carousel.querySelector('.tc-prev')?.addEventListener('click', () => { goTo(current - 1); startTimer(); });
+      carousel.querySelector('.tc-next')?.addEventListener('click', () => { goTo(current + 1); startTimer(); });
+      dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); startTimer(); }));
+
+      startTimer();
+    }
+    document.addEventListener('astro:page-load', initCarousel);
+  </script>
 
   <!-- CTA -->
-  <section style="background: var(--dark); color: #fff; text-align: center;">
+  <section style="background:var(--accent); color:var(--panel); padding:0;">
     <div class="container">
-      <h2 style="font-size:2rem; margin-bottom:1rem;">Готови да помогнем!</h2>
-      <p style="color:#aaa; margin-bottom:2rem; font-size:1.1rem;">Свържете се с нас за безплатна консултация и оферта.</p>
-      <a href={`${base}kontakti`} class="btn">Контактирайте ни</a>
-      <a href="tel:0888308666" class="btn btn-outline">📞 0888 308 666</a>
+      <div style="padding:72px 0; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+        <div>
+          <h2 style="font-size:clamp(30px,3.8vw,48px); font-weight:800; letter-spacing:-.025em; line-height:1.02; margin-bottom:12px;">Готови да помогнем.</h2>
+          <p style="font-size:17px; opacity:.8; max-width:440px; line-height:1.5;">Безплатна диагностика и оферта. Донесете компонента или цялата кола - казваме какво е проблемът, преди да започнем.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <a href="tel:0888308666" class="btn btn-dark" style="display:flex; align-items:center; gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:20px; letter-spacing:.02em;">0888 308 666</span>
+          </a>
+          <a href={`${base}kontakti`} style="text-align:center; color:var(--panel); font-weight:600; font-size:14px; opacity:.8;">Изпратете запитване →</a>
+        </div>
+      </div>
     </div>
   </section>
+
 </Layout>
