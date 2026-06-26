@@ -22,7 +22,7 @@ const images = Object.values(glob).map(m => m.default);
     <div class="container">
       <div class="gallery-grid">
         {images.map((img, i) => (
-          <button class="gallery-thumb" data-index={i} aria-label="Отвори снимка">
+          <button class="gallery-thumb" data-index={i} data-type="image" aria-label="Отвори снимка">
             <Image
               src={img}
               alt={`Сервиз ТИМ КАР - снимка ${i + 1}`}
@@ -33,6 +33,16 @@ const images = Object.values(glob).map(m => m.default);
             />
           </button>
         ))}
+        <div class="gallery-thumb video-cell">
+          <video
+            src={`${base}videos/1000003969.mp4`}
+            preload="none"
+            controls
+            playsinline
+            style="width:100%; height:100%; object-fit:cover; display:block;"
+          />
+          <div class="play-overlay" aria-hidden="true">▶</div>
+        </div>
       </div>
     </div>
   </section>
@@ -64,6 +74,24 @@ const images = Object.values(glob).map(m => m.default);
     transition: opacity 0.2s;
   }
   .gallery-thumb:hover { opacity: 0.85; }
+
+  .video-cell {
+    position: relative;
+    cursor: default;
+  }
+  .play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: rgba(255,255,255,.8);
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .video-cell:has(video:not([paused])) .play-overlay,
+  .video-cell video:focus ~ .play-overlay { opacity: 0; }
 
   #lightbox {
     border: none;
@@ -116,7 +144,7 @@ const images = Object.values(glob).map(m => m.default);
 
 <script>
   document.addEventListener('astro:page-load', () => {
-    const thumbs = Array.from(document.querySelectorAll<HTMLButtonElement>('.gallery-thumb'));
+    const thumbs = Array.from(document.querySelectorAll<HTMLButtonElement>('.gallery-thumb[data-type="image"]'));
     const dialog = document.getElementById('lightbox') as HTMLDialogElement;
     const img = document.getElementById('lb-img') as HTMLImageElement;
     const closeBtn = document.getElementById('lb-close')!;
@@ -128,8 +156,7 @@ const images = Object.values(glob).map(m => m.default);
     let current = 0;
 
     function getSrc(thumb: HTMLButtonElement): string {
-      const i = thumb.querySelector('img');
-      return i?.src ?? '';
+      return thumb.querySelector('img')?.src ?? '';
     }
 
     function open(index: number) {
@@ -162,5 +189,14 @@ const images = Object.values(glob).map(m => m.default);
       if (e.key === 'ArrowLeft') go(-1);
       if (e.key === 'ArrowRight') go(1);
     });
+
+    // Hide play overlay once video starts playing
+    const videoCell = document.querySelector('.video-cell');
+    const video = videoCell?.querySelector('video');
+    const overlay = videoCell?.querySelector('.play-overlay') as HTMLElement | null;
+    if (video && overlay) {
+      video.addEventListener('play', () => { overlay.style.opacity = '0'; });
+      video.addEventListener('pause', () => { overlay.style.opacity = '1'; });
+    }
   });
 </script>
