@@ -93,7 +93,7 @@ const jsonLd = {
             <li><a href={base}>Начало</a></li>
             <li><a href={`${base}za-nas`}>За нас</a></li>
             <li>
-              <a href={`${base}uslugi`}>Услуги ▾</a>
+              <a href={`${base}uslugi`} class="has-dropdown">Услуги ▾</a>
               <ul>
                 <li class="dropdown-heading"><a href={`${base}remont-reyki`}>Ремонт на рейки</a></li>
                 <li><a href={`${base}remont-reyki/hidravlichni`}>- Хидравлични рейки</a></li>
@@ -178,24 +178,37 @@ const jsonLd = {
     </footer>
 
     <script>
+      let navAbort: AbortController | null = null;
+
       function initNav() {
+        navAbort?.abort();
+        navAbort = new AbortController();
+        const signal = navAbort.signal;
+
         const toggle = document.getElementById('navToggle');
         const nav = document.getElementById('mainNav');
-        toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
+        if (!nav) return;
 
-        // Mobile: tap on a link that has a submenu → toggle it instead of navigating
-        document.querySelectorAll('nav ul li > a').forEach(link => {
+        toggle?.addEventListener('click', () => nav.classList.toggle('open'), { signal });
+
+        nav.querySelectorAll<HTMLAnchorElement>('a.has-dropdown').forEach(link => {
           link.addEventListener('click', (e) => {
-            // Only intercept on narrow screens (mobile nav is open)
-            if (window.innerWidth > 900) return;
-            const li = link.parentElement;
-            if (li?.querySelector('ul')) {
-              e.preventDefault();
-              li.classList.toggle('open');
-            }
-          });
+            e.preventDefault();
+            const li = link.closest('li');
+            if (!li) return;
+            const wasOpen = li.classList.contains('open');
+            nav.querySelectorAll('li.open').forEach(el => el.classList.remove('open'));
+            if (!wasOpen) li.classList.add('open');
+          }, { signal });
         });
+
+        document.addEventListener('click', (e) => {
+          if (!nav.contains(e.target as Element)) {
+            nav.querySelectorAll('li.open').forEach(el => el.classList.remove('open'));
+          }
+        }, { signal });
       }
+
       document.addEventListener('astro:page-load', initNav);
     </script>
   </body>

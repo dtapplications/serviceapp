@@ -80,8 +80,7 @@ nav#mainNav ul ul {
   list-style: none;
 }
 
-/* Show on hover or when toggled open */
-nav#mainNav ul li:hover > ul,
+/* Show when toggled open */
 nav#mainNav ul li.open > ul { display: block !important; }
 
 nav#mainNav > ul > li > a {
@@ -96,6 +95,7 @@ nav#mainNav > ul > li > a {
 }
 
 nav#mainNav > ul > li > a:hover { color: #EDEAE2; }
+
 
 nav ul li { position: relative; }
 
@@ -370,14 +370,14 @@ section { padding: 88px 0; }
 .breadcrumb {
   background: var(--panel);
   border-top: 1px solid rgba(255,255,255,.06);
-  color: #6E6A62;
+  color: #A6A39B;
   font-size: 12px;
   padding: 10px 0 20px;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: .04em;
 }
 
-.breadcrumb a { color: #6E6A62; }
+.breadcrumb a { color: #C8C4BC; }
 .breadcrumb a:hover { color: var(--accent); }
 
 /* WARRANTY BOX */
